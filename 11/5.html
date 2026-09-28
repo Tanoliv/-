@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пистолет Макарова - Огневая подготовка</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <style>
+        .question-block.multi {
+            border-left-color: #1f5f8b;
+        }
+        .question-block .hint {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin: 4px 0 8px 0;
+        }
+        .question-block label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .question-block label.answer-correct {
+            background: #d6f5d6;
+            border-left: 3px solid #1f7a1f;
+        }
+        .question-block label.answer-wrong-selected {
+            background: #f8d6d6;
+            border-left: 3px solid #8b0000;
+            text-decoration: line-through;
+        }
+        .question-block label.answer-correct-not-selected {
+            background: #fff7d6;
+            border-left: 3px solid #b8860b;
+        }
+        .question-block .feedback {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-indent: 0;
+        }
+        .question-block .feedback.ok {
+            color: #1f7a1f;
+            background: #e6f7e6;
+        }
+        .question-block .feedback.fail {
+            color: #8b0000;
+            background: #f7e6e6;
+        }
+        .question-block .correct-list {
+            font-size: 14px;
+            color: #333;
+            background: #f0f4f8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .correct-list strong {
+            color: #1f5f8b;
+        }
+        .question-block .correct-list ul {
+            margin: 4px 0 0 20px;
+            padding: 0;
+        }
+        .question-block .correct-list li {
+            margin: 2px 0;
+        }
+        .question-block .explanation {
+            font-size: 14px;
+            color: #333;
+            background: #eef6ee;
+            border-left: 3px solid #1f7a1f;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .explanation strong {
+            color: #1f5f8b;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="top">
+    <!-- ===== ШАПКА С НАВИГАЦИЕЙ ===== -->
+    <div class="header">
+        <div class="header-left">
+            <span class="star">★</span>
+            <h1>Огневая подготовка</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">★ Главная</a>
+            <a href="4.html">◀ Предыдущая</a>
+            <a href="6.html">Следующая ▶</a>
+        </div>
+    </div>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2>Назначение, боевые свойства, материальная часть и применение стрелкового оружия, ручных противотанковых гранатометов и ручных гранат.</h2>
+        
+        <h3>Назначение, боевые свойства, материальная часть и применение пистолета Макарова ПМ.</h3>
+        
+        <p>Пистолет Макарова – советский самозарядный пистолет, разработанный советским конструктором Николаем Фёдоровичем Макаровым в 1948 году (рис. 1). Принят на вооружение в 1951 году. Является личным оружием нападения и защиты, предназначен для поражения противника на коротких расстояниях.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 1 ===== -->
+<div class="figure">
+    <img src="Рис. 13.jpg" alt="Пистолет Макарова ПМ" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+
+        <<p>Рис. 1. Пистолет Макарова ПМ.</p>
+        
+        <p><strong>Основные характеристики пистолета Макарова приведены в табл. 2.</strong></p>
+        
+        <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; margin:15px 0; font-size:16px; border-color:#5a4d3a;">
+            <thead>
+                <tr style="background:#cbc4b2;">
+                    <th style="border:1px solid #5a4d3a; padding:8px; text-align:center;">№ п/п</th>
+                    <th style="border:1px solid #5a4d3a; padding:8px; text-align:center;">Характеристики ПМ</th>
+                    <th style="border:1px solid #5a4d3a; padding:8px; text-align:center;">Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">1.</td><td style="border:1px solid #5a4d3a; padding:6px;">Калибр, мм</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">9</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">2.</td><td style="border:1px solid #5a4d3a; padding:6px;">Масса пистолета со снаряжённым магазином, г</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">810</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">3.</td><td style="border:1px solid #5a4d3a; padding:6px;">Масса пистолета без патронов, г</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">730</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">4.</td><td style="border:1px solid #5a4d3a; padding:6px;">Длина, мм</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">161,5</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">5.</td><td style="border:1px solid #5a4d3a; padding:6px;">Длина ствола, мм</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">93,5</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">6.</td><td style="border:1px solid #5a4d3a; padding:6px;">Ширина, мм</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">30,5</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">7.</td><td style="border:1px solid #5a4d3a; padding:6px;">Высота, мм</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">126,75</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">8.</td><td style="border:1px solid #5a4d3a; padding:6px;">Прицельная дальность, м</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">50</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">9.</td><td style="border:1px solid #5a4d3a; padding:6px;">Дальность эффективного огня, м</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">50</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">10.</td><td style="border:1px solid #5a4d3a; padding:6px;">Дальность стрельбы с сохранением убойной силы, м</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">350</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">11.</td><td style="border:1px solid #5a4d3a; padding:6px;">Боевая скорострельность, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">30</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">12.</td><td style="border:1px solid #5a4d3a; padding:6px;">Начальная скорость пули, м/с</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">315</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">13.</td><td style="border:1px solid #5a4d3a; padding:6px;">Вид огня</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">одиночный</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">14.</td><td style="border:1px solid #5a4d3a; padding:6px;">Ёмкость магазина, патрон</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">8</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">15.</td><td style="border:1px solid #5a4d3a; padding:6px;">Патрон</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">9x18 мм</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">16.</td><td style="border:1px solid #5a4d3a; padding:6px;">Масса патрона, г</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">10</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">17.</td><td style="border:1px solid #5a4d3a; padding:6px;">Масса пули, г</td><td style="border:1px solid #5a4d3a; padding:6px; text-align:center;">6,1</td></tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Действие автоматики ПМ</strong> основано на свободном затворе. Запирание ствола происходит за счёт инертной массы затвора. Упругость возвратной пружины, надетой на ствол, в самом запирании не участвует, она всего лишь возвращает затвор в переднее положение. Ударно-спусковой механизм двойного действия с открытым курком. В ПМ применён свободный ударник, не имеющий пружины, удерживающей его в заднем положении. Теоретически это может привести к самопроизвольному выстрелу при падении пистолета с большой высоты, но Н. Ф. Макаров считал, что ударник не обладает достаточной массой, чтобы всерьёз учитывать эту возможность.</p>
+        
+        <p><strong>Пистолет состоит из 32 деталей и следующих основных частей:</strong></p>
+        <ul>
+            <li>рамка со стволом и спусковой скобой;</li>
+            <li>затвор с ударником, выбрасывателем и предохранителем;</li>
+            <li>возвратная пружина;</li>
+            <li>ударно-спусковой механизм;</li>
+            <li>рукоятка с винтом;</li>
+            <li>затворная задержка;</li>
+            <li>магазин.</li>
+        </ul>
+
+        <!-- ===== ВИДИО: РАБОТА ЧАСТЕЙ И МЕХАНИЗМОВ ПМ ===== -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;">ПМ Схема работы механизмов.mp4</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 13.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="ПМ Схема работы механизмов.mp4" type="video/mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="ПМ Схема работы механизмов.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: ПМ Схема работы механизмов.mp4
+    </p>
+</div>
+        
+        <p><strong>Отличительные черты пистолета Макарова</strong> – простота конструкции и многофункциональность деталей. Пистолет простой в эксплуатации, обладающий большим служебным ресурсом.</p>
+        
+        <h3>Разборка и сборка пистолета ПМ (Рис. 2)</h3>
+        
+        <p>Разборка пистолета ПМ может быть неполная и полная. Неполная разборка производится для чистки, смазки и осмотра пистолета, полная – для чистки при сильном загрязнении пистолета, после нахождения его под дождем или в снегу, при переходе на новую смазку, а также при ремонте.</p>
+        
+        <p>Частая полная разборка пистолета не допускается, так как она ускоряет изнашивание частей и механизмов. При разборке и сборке пистолета необходимо соблюдать следующие правила:</p>
+        <ul>
+            <li>разборку и сборку производить на столе или скамейке, а в поле – на чистой подстилке;</li>
+            <li>части и механизмы класть в порядке разборки, обращаться с ними осторожно, не допускать излишних усилий и резких ударов;</li>
+            <li>при сборке обращать внимание на нумерацию частей, чтобы не перепутать их с частями других пистолетов.</li>
+        </ul>
+        
+        <p><strong>Неполную разборку пистолета нужно производить в следующем порядке:</strong></p>
+        <ol>
+            <li><strong>Извлечь магазин из основания рукоятки.</strong> Удерживая пистолет за рукоятку правой рукой, большим пальцем левой руки отвести защелку магазина назад до отказа, одновременно оттягивая указательным пальцем левой руки выступающую часть крышки магазина, извлечь магазин из основания рукоятки. Проверить, нет ли в патроннике патрона, для чего выключить предохранитель (опустить флажок вниз), отвести левой рукой затвор в заднее положение, поставить его на затворную задержку и осмотреть патронник. Нажатием большим пальцем правой руки на затворную задержку отпустить затвор.</li>
+            <li><strong>Отделить затвор от рамки.</strong> Взяв пистолет в правую руку за рукоятку, левой рукой оттянуть спусковую скобу вниз и, перекосив ее влево, упереть в рамку так, чтобы она удерживалась в этом положении. При дальнейшей разборке удерживать ее в приданном положении указательным пальцем правой руки. Левой рукой отвести затвор в крайнее заднее положение и, приподняв его задний конец, дать ему возможность продвинуться вперед под действием возвратной пружины. Отделить затвор от рамки и поставить спусковую скобу на свое место.</li>
+            <li><strong>Снять со ствола возвратную пружину.</strong> Удерживая рамку правой рукой за рукоятку и вращая возвратную пружину на себя левой рукой, снять ее со ствола.</li>
+        </ol>
+        
+        <p>Сборку пистолета после неполной разборки производить в обратном порядке.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 2===== -->
+<div class="figure">
+    <img src="Рис. 14.jpg" alt="Неполная разборка и сборка пистолета Макарова" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 2. Неполная разборка и сборка пистолета Макарова.</p>
+
+          <!-- ===== ВИДИО: УЧИМСЯ ОБРАЩЕНИЮ С ПМ ===== -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;">ПМ Учимся обращению с оружием на пистолете Макарова_240p.mp4</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 13.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="Урок 1.ПМ Учимся обращению с оружием на пистолете Макарова_240p.mp4" type="video/mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="Урок 1.ПМ Учимся обращению с оружием на пистолете Макарова_240p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: Урок 1.ПМ Учимся обращению с оружием на пистолете Макарова_240p.mp44
+    </p>
+</div>
+
+        <!-- ===== ТЕСТ ===== -->
+        <div class="test-section">
+            <h3>📝 Контрольный тест по разделу</h3>
+            <div id="testContainer"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="test-btn" onclick="checkTest()">Проверить ответы</button>
+                <button class="test-btn" onclick="resetTest()">🔄 Начать заново</button>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <!-- ===== НИЖНЯЯ НАВИГАЦИЯ ===== -->
+    <div class="nav-bottom">
+        <a href="../index.html" class="nav-btn">★ Главная</a>
+        <a href="4.html" class="nav-btn">◀ Предыдущая</a>
+        <a href="6.html" class="nav-btn">Следующая ▶</a>
+        <a href="#top" class="nav-btn">▲ Вверх</a>
+    </div>
+
+    <div class="footer-note">
+        Москва 2026 г.
+    </div>
+</div>
+
+<script>
+// ============================================
+// БАЗА ВОПРОСОВ
+// Оставлены только те вопросы, ответ на которые
+// прямо содержится в тексте страницы
+// ============================================
+var questionBank = [
+    // --- ВОПРОСЫ С ОДНИМ ПРАВИЛЬНЫМ ОТВЕТОМ ---
+    {
+        question: "Кем разработан пистолет Макарова?",
+        options: [
+            "Н.Ф. Макаровым",
+            "М.Т. Калашниковым",
+            "В.А. Дегтярёвым",
+            "С.Г. Симоновым"
+        ],
+        correct: 0,
+        explanation: "Пистолет Макарова разработан советским конструктором Николаем Фёдоровичем Макаровым в 1948 году. Калашников создал автомат, Дегтярёв — пулемёты, Симонов — карабин и винтовку."
+    },
+    {
+        question: "Для чего предназначен пистолет Макарова?",
+        options: [
+            "Для поражения противника на коротких расстояниях",
+            "Для поражения противника на дальних расстояниях",
+            "Для поражения бронированных целей",
+            "Для ведения автоматического огня"
+        ],
+        correct: 0,
+        explanation: "ПМ является личным оружием нападения и защиты и предназначен для поражения противника на коротких расстояниях. Это пистолет, а не автомат или противотанковое средство."
+    },
+    {
+        question: "Какой калибр пистолета Макарова?",
+        options: ["9 мм", "7,62 мм", "5,45 мм", "12,7 мм"],
+        correct: 0,
+        explanation: "Калибр ПМ — 9 мм. Используется патрон 9x18 мм. Калибр 7,62 мм — у АК-47, 5,45 мм — у АК-74."
+    },
+    {
+        question: "Какова масса пистолета Макарова со снаряженным магазином?",
+        options: ["810 г", "730 г", "850 г", "900 г"],
+        correct: 0,
+        explanation: "Масса ПМ со снаряжённым магазином — 810 г. Масса без патронов — 730 г."
+    },
+    {
+        question: "Какова масса пистолета Макарова без патронов?",
+        options: ["730 г", "810 г", "760 г", "700 г"],
+        correct: 0,
+        explanation: "Масса ПМ без патронов — 730 г. Со снаряжённым магазином — 810 г. Разница 80 г — масса 8 патронов."
+    },
+    {
+        question: "Какова длина пистолета Макарова?",
+        options: ["161,5 мм", "150 мм", "170 мм", "180 мм"],
+        correct: 0,
+        explanation: "Длина ПМ — 161,5 мм; длина ствола — 93,5 мм. Эти значения приведены в таблице характеристик."
+    },
+    {
+        question: "Какова длина ствола пистолета Макарова?",
+        options: ["93,5 мм", "83,5 мм", "103,5 мм", "113,5 мм"],
+        correct: 0,
+        explanation: "Длина ствола ПМ — 93,5 мм. Общая длина пистолета — 161,5 мм."
+    },
+    {
+        question: "Какова прицельная дальность пистолета Макарова?",
+        options: ["50 м", "25 м", "75 м", "100 м"],
+        correct: 0,
+        explanation: "Прицельная дальность ПМ — 50 м. На этой же дальности обеспечивается и эффективный огонь."
+    },
+    {
+        question: "Какова дальность эффективного огня пистолета Макарова?",
+        options: ["50 м", "25 м", "75 м", "100 м"],
+        correct: 0,
+        explanation: "Дальность эффективного огня ПМ — 50 м, что совпадает с прицельной дальностью."
+    },
+    {
+        question: "Какова боевая скорострельность пистолета Макарова?",
+        options: ["30 выстр/мин", "20 выстр/мин", "40 выстр/мин", "50 выстр/мин"],
+        correct: 0,
+        explanation: "Боевая скорострельность ПМ — 30 выстр/мин. Это определяется одиночным режимом огня и необходимостью перезарядки магазина."
+    },
+    {
+        question: "Какова начальная скорость пули пистолета Макарова?",
+        options: ["315 м/с", "295 м/с", "335 м/с", "355 м/с"],
+        correct: 0,
+        explanation: "Начальная скорость пули ПМ — 315 м/с. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какой вид огня у пистолета Макарова?",
+        options: ["Одиночный", "Автоматический", "Очередями", "С переменным режимом"],
+        correct: 0,
+        explanation: "ПМ ведёт только одиночный огонь. Автоматический огонь — у автоматов и пулемётов."
+    },
+    {
+        question: "Какова ёмкость магазина пистолета Макарова?",
+        options: ["8 патронов", "6 патронов", "10 патронов", "12 патронов"],
+        correct: 0,
+        explanation: "Ёмкость магазина ПМ — 8 патронов. Это указано в таблице характеристик."
+    },
+    {
+        question: "Какой патрон используется в пистолете Макарова?",
+        options: ["9x18 мм", "7,62x25 мм", "9x19 мм", "5,45x18 мм"],
+        correct: 0,
+        explanation: "В ПМ используется патрон 9x18 мм. Патрон 9x19 мм — у зарубежных пистолетов, 7,62x25 мм — у пистолета ТТ."
+    },
+    {
+        question: "Какова масса пули пистолета Макарова?",
+        options: ["6,1 г", "5,1 г", "7,1 г", "8,1 г"],
+        correct: 0,
+        explanation: "Масса пули ПМ — 6,1 г. Масса всего патрона — 10 г."
+    },
+    {
+        question: "На чём основано действие автоматики ПМ?",
+        options: [
+            "На свободном затворе",
+            "На отводе пороховых газов",
+            "На энергии отдачи ствола",
+            "На газовом поршне"
+        ],
+        correct: 0,
+        explanation: "Действие автоматики ПМ основано на свободном затворе. Отвод пороховых газов и газовый поршень — схемы автоматов и пулемётов."
+    },
+    {
+        question: "За счёт чего происходит запирание ствола в ПМ?",
+        options: [
+            "За счёт инертной массы затвора",
+            "За счёт поворота затвора",
+            "За счёт клинового запирания",
+            "За счёт газового поршня"
+        ],
+        correct: 0,
+        explanation: "Запирание ствола в ПМ происходит за счёт инертной массы затвора. Возвратная пружина в запирании не участвует."
+    },
+    {
+        question: "Какова роль возвратной пружины в ПМ?",
+        options: [
+            "Возвращает затвор в переднее положение",
+            "Участвует в запирании ствола",
+            "Участвует в досылании патрона",
+            "Обеспечивает автоматический огонь"
+        ],
+        correct: 0,
+        explanation: "Возвратная пружина ПМ только возвращает затвор в переднее положение; в запирании ствола она не участвует — запирание обеспечивается инертной массой затвора."
+    },
+    {
+        question: "Какой ударно-спусковой механизм в ПМ?",
+        options: [
+            "Двойного действия с открытым курком",
+            "Одинарного действия",
+            "Ударникового типа",
+            "Со скрытым курком"
+        ],
+        correct: 0,
+        explanation: "В ПМ применён ударно-спусковой механизм двойного действия с открытым курком. Это позволяет производить выстрел как с предварительным взведением курка, так и самовзводом."
+    },
+    {
+        question: "Какой ударник применён в ПМ?",
+        options: [
+            "Свободный ударник, не имеющий пружины",
+            "Ударник с пружиной",
+            "Ударник с предохранителем",
+            "Ударник двойного действия"
+        ],
+        correct: 0,
+        explanation: "В ПМ применён свободный ударник, не имеющий пружины, удерживающей его в заднем положении. Теоретически это может привести к самопроизвольному выстрелу при падении, но масса ударника мала."
+    },
+    {
+        question: "Какие отличительные черты пистолета Макарова?",
+        options: [
+            "Простота конструкции и многофункциональность деталей",
+            "Сложность конструкции и высокая точность",
+            "Большой калибр и мощность",
+            "Специальное покрытие"
+        ],
+        correct: 0,
+        explanation: "Отличительные черты ПМ — простота конструкции и многофункциональность деталей. Пистолет прост в эксплуатации и обладает большим служебным ресурсом."
+    },
+    {
+        question: "Для чего производится неполная разборка ПМ?",
+        options: [
+            "Для чистки, смазки и осмотра",
+            "Для ремонта",
+            "Для замены частей",
+            "Для модернизации"
+        ],
+        correct: 0,
+        explanation: "Неполная разборка ПМ производится для чистки, смазки и осмотра пистолета. Для ремонта и замены частей применяется полная разборка."
+    },
+    {
+        question: "Для чего производится полная разборка ПМ?",
+        options: [
+            "Для чистки при сильном загрязнении, после дождя или снега, при переходе на новую смазку, при ремонте",
+            "Для ежедневного ухода",
+            "Для осмотра",
+            "Для проверки"
+        ],
+        correct: 0,
+        explanation: "Полная разборка производится для чистки при сильном загрязнении, после нахождения под дождём или в снегу, при переходе на новую смазку, а также при ремонте."
+    },
+    {
+        question: "Что делают на первом этапе неполной разборки ПМ?",
+        options: [
+            "Извлекают магазин из основания рукоятки",
+            "Отделяют затвор от рамки",
+            "Снимают возвратную пружину",
+            "Разбирают магазин"
+        ],
+        correct: 0,
+        explanation: "Первый этап неполной разборки ПМ — извлечение магазина из основания рукоятки с последующей проверкой отсутствия патрона в патроннике."
+    },
+    {
+        question: "Что делают на втором этапе неполной разборки ПМ?",
+        options: [
+            "Отделяют затвор от рамки",
+            "Извлекают магазин",
+            "Снимают возвратную пружину",
+            "Разбирают магазин"
+        ],
+        correct: 0,
+        explanation: "Второй этап неполной разборки ПМ — отделение затвора от рамки. Для этого спусковую скобу оттягивают вниз и перекашивают влево."
+    },
+    {
+        question: "Что делают на третьем этапе неполной разборки ПМ?",
+        options: [
+            "Снимают возвратную пружину",
+            "Извлекают магазин",
+            "Отделяют затвор от рамки",
+            "Разбирают магазин"
+        ],
+        correct: 0,
+        explanation: "Третий этап неполной разборки ПМ — снятие возвратной пружины со ствола. Сборка производится в обратном порядке."
+    },
+    {
+        question: "В каком порядке производится сборка ПМ после неполной разборки?",
+        options: [
+            "В обратном порядке",
+            "В произвольном порядке",
+            "В том же порядке",
+            "Начиная с магазина"
+        ],
+        correct: 0,
+        explanation: "Сборка пистолета после неполной разборки производится в обратном порядке относительно разборки."
+    },
+    {
+        question: "Для чего при разборке проверяют патронник?",
+        options: [
+            "Чтобы убедиться в отсутствии патрона",
+            "Для чистки",
+            "Для смазки",
+            "Для осмотра нарезов"
+        ],
+        correct: 0,
+        explanation: "Проверка патронника при разборке необходима для того, чтобы убедиться в отсутствии патрона — это требование безопасности."
+    },
+
+    // --- ВОПРОСЫ С НЕСКОЛЬКИМИ ПРАВИЛЬНЫМИ ОТВЕТАМИ ---
+    {
+        multiple: true,
+        question: "Из каких основных частей состоит пистолет Макарова? (выберите все правильные)",
+        options: [
+            "Рамка со стволом и спусковой скобой",
+            "Затвор с ударником, выбрасывателем и предохранителем",
+            "Возвратная пружина",
+            "Ударно-спусковой механизм",
+            "Газовая трубка со ствольной накладкой"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Основные части ПМ: рамка со стволом и спусковой скобой, затвор, возвратная пружина, ударно-спусковой механизм, рукоятка с винтом, затворная задержка и магазин. Газовая трубка со ствольной накладкой — часть автомата Калашникова, а не пистолета."
+    },
+    {
+        multiple: true,
+        question: "Для чего производится полная разборка пистолета? (выберите все правильные)",
+        options: [
+            "Для чистки при сильном загрязнении",
+            "После нахождения пистолета под дождём или в снегу",
+            "При переходе на новую смазку",
+            "При ремонте",
+            "Для ежедневного осмотра"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Полная разборка производится при сильном загрязнении, после дождя или снега, при переходе на новую смазку и при ремонте. Для ежедневного осмотра достаточно неполной разборки."
+    },
+    {
+        multiple: true,
+        question: "Какие правила необходимо соблюдать при разборке и сборке пистолета? (выберите все правильные)",
+        options: [
+            "Разборку и сборку производить на столе или скамейке, а в поле — на чистой подстилке",
+            "Части и механизмы класть в порядке разборки",
+            "Обращаться с частями осторожно, не допускать излишних усилий и резких ударов",
+            "При сборке обращать внимание на нумерацию частей",
+            "Производить разборку на земле для устойчивости"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "При разборке и сборке пистолета нужно соблюдать четыре правила: работать на столе или чистой подстилке, класть части в порядке разборки, обращаться осторожно и следить за нумерацией. Разборка на земле не рекомендуется — части могут загрязниться."
+    },
+    {
+        multiple: true,
+        question: "Какие этапы включает неполная разборка пистолета Макарова? (выберите все правильные)",
+        options: [
+            "Извлечение магазина из основания рукоятки",
+            "Отделение затвора от рамки",
+            "Снятие возвратной пружины со ствола",
+            "Разборка ударно-спускового механизма",
+            "Разборка магазина"
+        ],
+        correct: [0, 1, 2],
+        explanation: "Неполная разборка ПМ включает три этапа: извлечение магазина, отделение затвора от рамки и снятие возвратной пружины. Разборка УСМ и магазина выполняется только при полной разборке."
+    },
+    {
+        multiple: true,
+        question: "Какие утверждения о пистолете Макарова верны? (выберите все правильные)",
+        options: [
+            "Действие автоматики основано на свободном затворе",
+            "Запирание ствола происходит за счёт инертной массы затвора",
+            "Ударно-спусковой механизм двойного действия с открытым курком",
+            "Применён свободный ударник, не имеющий пружины",
+            "Действие автоматики основано на отводе пороховых газов"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Автоматика ПМ основана на свободном затворе, запирание обеспечивается инертной массой затвора, УСМ двойного действия с открытым курком, применён свободный ударник без пружины. Отвод пороховых газов — принцип работы автоматов и пулемётов, а не ПМ."
+    }
+];
+
+// ============================================
+// ЛОГИКА ТЕСТА
+// ============================================
+var currentQuestions = [];
+var selectedAnswers = {};
+var usedQuestionIndices = [];
+
+var QUESTIONS_PER_TEST = 10;
+
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
+function getRandomQuestions() {
+    if (usedQuestionIndices.length + QUESTIONS_PER_TEST > questionBank.length) {
+        usedQuestionIndices = [];
+    }
+
+    var availableIndices = [];
+    for (var i = 0; i < questionBank.length; i++) {
+        if (usedQuestionIndices.indexOf(i) === -1) {
+            availableIndices.push(i);
+        }
+    }
+
+    availableIndices = shuffleArray(availableIndices);
+    var chosenIndices = availableIndices.slice(0, QUESTIONS_PER_TEST);
+
+    for (var k = 0; k < chosenIndices.length; k++) {
+        usedQuestionIndices.push(chosenIndices[k]);
+    }
+
+    var result = [];
+    for (var m = 0; m < chosenIndices.length; m++) {
+        result.push(prepareQuestion(questionBank[chosenIndices[m]]));
+    }
+    return result;
+}
+
+function prepareQuestion(q) {
+    var isMulti = !!q.multiple;
+    var indices = [];
+    for (var i = 0; i < q.options.length; i++) indices.push(i);
+    var shuffledIndices = shuffleArray(indices);
+
+    var newOptions = [];
+    for (var j = 0; j < shuffledIndices.length; j++) {
+        newOptions.push(q.options[shuffledIndices[j]]);
+    }
+
+    var newCorrect;
+    if (isMulti) {
+        newCorrect = [];
+        for (var c = 0; c < q.correct.length; c++) {
+            newCorrect.push(shuffledIndices.indexOf(q.correct[c]));
+        }
+        newCorrect.sort(function(a, b) { return a - b; });
+    } else {
+        newCorrect = shuffledIndices.indexOf(q.correct);
+    }
+
+    return {
+        question: q.question,
+        options: newOptions,
+        correct: newCorrect,
+        multiple: isMulti,
+        explanation: q.explanation || ''
+    };
+}
+
+function renderTest() {
+    currentQuestions = getRandomQuestions();
+    selectedAnswers = {};
+    var container = document.getElementById('testContainer');
+    var html = '';
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var cls = q.multiple ? 'question-block multi' : 'question-block';
+        html += '<div class="' + cls + '" id="q' + i + '">';
+        html += '<p>' + (i + 1) + '. ' + q.question + '</p>';
+        if (q.multiple) {
+            html += '<div class="hint">Выберите все правильные варианты</div>';
+        }
+        for (var j = 0; j < q.options.length; j++) {
+            html += '<label id="q' + i + '_opt' + j + '">';
+            var inputType = q.multiple ? 'checkbox' : 'radio';
+            html += '<input type="' + inputType + '" name="q' + i + '" value="' + j + '"> ';
+            html += q.options[j];
+            html += '</label>';
+        }
+        html += '<div class="feedback" id="fb' + i + '" style="display:none;"></div>';
+        html += '<div class="correct-list" id="cl' + i + '" style="display:none;"></div>';
+        html += '<div class="explanation" id="ex' + i + '" style="display:none;"></div>';
+        html += '</div>';
+    }
+    container.innerHTML = html;
+    document.getElementById('resultBox').style.display = 'none';
+    document.getElementById('resultBox').innerHTML = '';
+
+    container.onchange = function(e) {
+        var target = e.target;
+        if (target.tagName !== 'INPUT') return;
+        var name = target.name;
+        var qIndex = parseInt(name.substring(1), 10);
+        var q = currentQuestions[qIndex];
+        if (!q) return;
+
+        if (q.multiple) {
+            var checked = [];
+            var boxes = container.querySelectorAll('input[name="' + name + '"]:checked');
+            for (var b = 0; b < boxes.length; b++) {
+                checked.push(parseInt(boxes[b].value, 10));
+            }
+            checked.sort(function(a, b) { return a - b; });
+            selectedAnswers[name] = checked;
+        } else {
+            selectedAnswers[name] = parseInt(target.value, 10);
+        }
+    };
+}
+
+function arraysEqual(a, b) {
+    if (!a || !b) return false;
+    if (a.length !== b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+function checkTest() {
+    var correct = 0;
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var selected = selectedAnswers['q' + i];
+        var qBlock = document.getElementById('q' + i);
+        var fb = document.getElementById('fb' + i);
+        var cl = document.getElementById('cl' + i);
+        var ex = document.getElementById('ex' + i);
+        var isCorrect = false;
+
+        for (var opt = 0; opt < q.options.length; opt++) {
+            var lbl = document.getElementById('q' + i + '_opt' + opt);
+            if (lbl) {
+                lbl.classList.remove('answer-correct', 'answer-wrong-selected', 'answer-correct-not-selected');
+            }
+        }
+
+        if (q.multiple) {
+            var correctArr = q.correct;
+            var selectedArr = (selected !== undefined) ? selected : [];
+
+            for (var m = 0; m < q.options.length; m++) {
+                var lblM = document.getElementById('q' + i + '_opt' + m);
+                if (!lblM) continue;
+                var isCorr = correctArr.indexOf(m) !== -1;
+                var isSel = selectedArr.indexOf(m) !== -1;
+                if (isCorr && isSel) {
+                    lblM.classList.add('answer-correct');
+                } else if (!isCorr && isSel) {
+                    lblM.classList.add('answer-wrong-selected');
+                } else if (isCorr && !isSel) {
+                    lblM.classList.add('answer-correct-not-selected');
+                }
+            }
+
+            if (selectedArr.length > 0 && arraysEqual(selectedArr, correctArr)) {
+                isCorrect = true;
+            }
+        } else {
+            var correctIdx = q.correct;
+            for (var n = 0; n < q.options.length; n++) {
+                var lblN = document.getElementById('q' + i + '_opt' + n);
+                if (!lblN) continue;
+                var isCorrN = (n === correctIdx);
+                var isSelN = (selected === n);
+                if (isCorrN) {
+                    lblN.classList.add('answer-correct');
+                } else if (isSelN) {
+                    lblN.classList.add('answer-wrong-selected');
+                }
+            }
+            if (selected !== undefined && selected === correctIdx) {
+                isCorrect = true;
+            }
+        }
+
+        if (isCorrect) {
+            correct++;
+            qBlock.style.borderLeftColor = '#1f7a1f';
+            fb.className = 'feedback ok';
+            fb.style.display = 'block';
+            fb.textContent = '✔ Верно';
+            cl.style.display = 'none';
+        } else {
+            qBlock.style.borderLeftColor = '#8b0000';
+            fb.className = 'feedback fail';
+            fb.style.display = 'block';
+            fb.textContent = '✘ Неверно';
+
+            var listHtml = '<strong>Правильные варианты:</strong><ul>';
+            if (q.multiple) {
+                for (var c = 0; c < q.correct.length; c++) {
+                    listHtml += '<li>' + q.options[q.correct[c]] + '</li>';
+                }
+            } else {
+                listHtml += '<li>' + q.options[q.correct] + '</li>';
+            }
+            listHtml += '</ul>';
+            cl.innerHTML = listHtml;
+            cl.style.display = 'block';
+        }
+
+        // Пояснение правильного ответа показывается ВСЕГДА
+        if (q.explanation) {
+            ex.innerHTML = '<strong>Пояснение:</strong> ' + q.explanation;
+            ex.style.display = 'block';
+        } else {
+            ex.style.display = 'none';
+        }
+    }
+
+    var grade, gradeText, gradeClass;
+    if (correct === 10) { grade = 5; gradeText = 'Отлично!'; gradeClass = 'grade-5'; }
+    else if (correct === 9) { grade = 4; gradeText = 'Хорошо!'; gradeClass = 'grade-4'; }
+    else if (correct === 8) { grade = 3; gradeText = 'Удовлетворительно'; gradeClass = 'grade-3'; }
+    else { grade = 2; gradeText = 'Неудовлетворительно. Требуется повторное изучение!'; gradeClass = 'grade-2'; }
+
+    var resultBox = document.getElementById('resultBox');
+    resultBox.style.display = 'block';
+    resultBox.className = 'result-box';
+    resultBox.innerHTML = '<div class="' + gradeClass + '">' +
+        '<p style="font-size: 28px;">Ваша оценка: ' + grade + '</p>' +
+        '<p style="font-size: 22px;">' + gradeText + '</p>' +
+        '<p style="font-size: 18px; margin-top: 10px;">Правильных ответов: ' + correct + ' из 10</p>' +
+        '</div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetTest() {
+    renderTest();
+    var section = document.querySelector('.test-section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+window.onload = function() {
+    renderTest();
+};
+</script>
+</body>
+</html>

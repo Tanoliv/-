@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ручной Пулемет Калашникова - Огневая подготовка</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <style>
+        .question-block.multi {
+            border-left-color: #1f5f8b;
+        }
+        .question-block .hint {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin: 4px 0 8px 0;
+        }
+        .question-block label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .question-block label.answer-correct {
+            background: #d6f5d6;
+            border-left: 3px solid #1f7a1f;
+        }
+        .question-block label.answer-wrong-selected {
+            background: #f8d6d6;
+            border-left: 3px solid #8b0000;
+            text-decoration: line-through;
+        }
+        .question-block label.answer-correct-not-selected {
+            background: #fff7d6;
+            border-left: 3px solid #b8860b;
+        }
+        .question-block .feedback {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-indent: 0;
+        }
+        .question-block .feedback.ok {
+            color: #1f7a1f;
+            background: #e6f7e6;
+        }
+        .question-block .feedback.fail {
+            color: #8b0000;
+            background: #f7e6e6;
+        }
+        .question-block .correct-list {
+            font-size: 14px;
+            color: #333;
+            background: #f0f4f8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .correct-list strong {
+            color: #1f5f8b;
+        }
+        .question-block .correct-list ul {
+            margin: 4px 0 0 20px;
+            padding: 0;
+        }
+        .question-block .correct-list li {
+            margin: 2px 0;
+        }
+        .question-block .explanation {
+            font-size: 14px;
+            color: #333;
+            background: #eef6ee;
+            border-left: 3px solid #1f7a1f;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .explanation strong {
+            color: #1f5f8b;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="top">
+    <!-- ===== ШАПКА С НАВИГАЦИЕЙ ===== -->
+    <div class="header">
+        <div class="header-left">
+            <span class="star">★</span>
+            <h1>Огневая подготовка</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">★ Главная</a>
+            <a href="6.html">◀ Предыдущая</a>
+            <a href="8.html">Следующая ▶</a>
+        </div>
+    </div>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2>Назначение, боевые свойства, материальная часть и применение ручного пулемета Калашникова РПК-74.</h2>
+        
+        <p><strong>Ручной пулемет Калашникова РПК-74</strong> предназначен для уничтожения живой силы и поражения огневых средств противника (рис. 1).</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 1 ===== -->
+<div class="figure">
+    <img src="Рис. 24.jpg" alt="Ручной пулемет Калашникова РПК-74" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 1. Ручной пулемет Калашникова РПК-74.</p>
+        
+        <p>Из пулемета ведется автоматический или одиночный огонь. Автоматический огонь является основным видом огня: он ведется короткими (до 5 выстрелов) и длинными (до 15 выстрелов) очередями и непрерывно. Подача патронов при стрельбе производится из коробчатого магазина емкостью на 45 патронов.</p>
+                
+        <p><strong>Основные боевые характеристики ручного пулемета Калашникова РПК-74 приведены в табл. 4.</strong></p>
+        
+        <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse; margin:15px 0; font-size:15px; border-color:#5a4d3a;">
+            <thead>
+                <tr style="background:#cbc4b2;">
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">№ п/п</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Характеристики РПК-74</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1.</td><td style="border:1px solid #5a4d3a; padding:5px;">Калибр, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5,45</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">2.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса со снаряжённым магазином, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5,46</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса без патронов, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5,0</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">4.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1060</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина ствола, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">590</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">6.</td><td style="border:1px solid #5a4d3a; padding:5px;">Прицельная дальность, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1000</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">7.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность эффективного огня, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">до 800</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">8.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность стрельбы с сохранением убойной силы, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1350</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">9.</td><td style="border:1px solid #5a4d3a; padding:5px;">Максимальная дальность, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3150</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">10.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность прямого выстрела по грудной фигуре, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">460</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">11.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность прямого выстрела по ростовой фигуре, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">640</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">12.</td><td style="border:1px solid #5a4d3a; padding:5px;">Боевая скорострельность: при стрельбе одиночными выстрелами, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">50</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">13.</td><td style="border:1px solid #5a4d3a; padding:5px;">Боевая скорострельность: при стрельбе очередями, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">150</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">14.</td><td style="border:1px solid #5a4d3a; padding:5px;">Темп стрельбы, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">600-650</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">15.</td><td style="border:1px solid #5a4d3a; padding:5px;">Начальная скорость пули, м/с</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">960</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">16.</td><td style="border:1px solid #5a4d3a; padding:5px;">Ёмкость магазина, патрон</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">45</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">17.</td><td style="border:1px solid #5a4d3a; padding:5px;">Патрон</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5,45x39 мм</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">18.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса патрона, г</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">10,3</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">19.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса пули, г</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,4</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20.</td><td style="border:1px solid #5a4d3a; padding:5px;">Количество нарезов в стволе, шт.</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">4</td></tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Ручной пулемет Калашникова РПК-74 состоит из следующих основных частей и механизмов:</strong></p>
+        <ul>
+            <li>ствола со ствольной коробкой, с прицельным приспособлением и прикладом;</li>
+            <li>крышки ствольной коробки;</li>
+            <li>затворной рамы с газовым поршнем;</li>
+            <li>затвора;</li>
+            <li>возвратного механизма;</li>
+            <li>газовой трубки со ствольной накладкой;</li>
+            <li>ударно-спускового механизма;</li>
+            <li>цевья;</li>
+            <li>магазина;</li>
+            <li>сошки;</li>
+            <li>пламегасителя.</li>
+        </ul>
+        
+        <p><strong>Сошка пулемета</strong> служит упором при стрельбе. Она имеет основание, две ноги с полозками для упора в грунт и выступами для фиксации ног в сложенном положении, пружину для разведения ног, пружинную застежку на левой ноге для скрепления ног в сложенном положении. Сошка от пулемета не отделяется.</p>
+        
+        <p><strong>Пламегаситель пулемета</strong> служит для уменьшения величины пламени при выстреле.</p>
+        
+        <p>Назначение остальных основных частей и механизмов, а также принцип работы РПК-74 аналогичны автомату Калашникова АК-74.</p>
+
+        <!-- ===== ТЕСТ ===== -->
+        <div class="test-section">
+            <h3>📝 Контрольный тест по разделу</h3>
+            <div id="testContainer"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="test-btn" onclick="checkTest()">Проверить ответы</button>
+                <button class="test-btn" onclick="resetTest()">🔄 Начать заново</button>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <!-- ===== НИЖНЯЯ НАВИГАЦИЯ ===== -->
+    <div class="nav-bottom">
+        <a href="../index.html" class="nav-btn">★ Главная</a>
+        <a href="6.html" class="nav-btn">◀ Предыдущая</a>
+        <a href="8.html" class="nav-btn">Следующая ▶</a>
+        <a href="#top" class="nav-btn">▲ Вверх</a>
+    </div>
+
+    <div class="footer-note">
+        Москва 2026 г.
+    </div>
+</div>
+
+<script>
+// ============================================
+// БАЗА ВОПРОСОВ
+// multiple: true — вопрос с несколькими правильными ответами
+// correct для multiple — массив индексов правильных вариантов
+// explanation — пояснение правильного ответа
+// ============================================
+var questionBank = [
+    // --- ВОПРОСЫ С ОДНИМ ПРАВИЛЬНЫМ ОТВЕТОМ ---
+    {
+        question: "Для чего предназначен ручной пулемет Калашникова РПК-74?",
+        options: [
+            "Для уничтожения живой силы и поражения огневых средств противника",
+            "Для поражения бронированных целей и укреплений противника",
+            "Для ведения снайперского огня на большие дальности",
+            "Для метания гранат и постановки дымовых завес"
+        ],
+        correct: 0,
+        explanation: "Согласно тексту, РПК-74 предназначен для уничтожения живой силы и поражения огневых средств противника. Поражение бронированных целей и снайперский огонь — задачи других средств."
+    },
+    {
+        question: "Какие виды огня ведутся из пулемета?",
+        options: [
+            "Автоматический или одиночный",
+            "Только автоматический",
+            "Только одиночный",
+            "Только очередями фиксированной длины"
+        ],
+        correct: 0,
+        explanation: "Из пулемёта ведётся автоматический или одиночный огонь. Автоматический огонь является основным, но одиночный также предусмотрен конструкцией."
+    },
+    {
+        question: "Какой вид огня является основным из пулемета?",
+        options: [
+            "Автоматический огонь",
+            "Одиночный огонь",
+            "Снайперский огонь",
+            "Прицельный огонь"
+        ],
+        correct: 0,
+        explanation: "Основным видом огня из пулемёта является автоматический огонь: он ведётся короткими (до 5 выстрелов) и длинными (до 15 выстрелов) очередями и непрерывно."
+    },
+    {
+        question: "Сколько выстрелов в короткой очереди из РПК-74?",
+        options: [
+            "До 5 выстрелов",
+            "До 3 выстрелов",
+            "До 10 выстрелов",
+            "До 15 выстрелов"
+        ],
+        correct: 0,
+        explanation: "Короткая очередь из РПК-74 — до 5 выстрелов. Длинная очередь — до 15 выстрелов. Это отличает пулемёт от автомата, где длинная очередь — до 10 выстрелов."
+    },
+    {
+        question: "Сколько выстрелов в длинной очереди из РПК-74?",
+        options: [
+            "До 15 выстрелов",
+            "До 5 выстрелов",
+            "До 10 выстрелов",
+            "До 20 выстрелов"
+        ],
+        correct: 0,
+        explanation: "Длинная очередь из РПК-74 — до 15 выстрелов. Это больше, чем у автомата Калашникова (до 10 выстрелов), что обусловлено ролью пулемёта как средства поддержки."
+    },
+    {
+        question: "Какова ёмкость магазина РПК-74?",
+        options: ["45 патронов", "30 патронов", "40 патронов", "75 патронов"],
+        correct: 0,
+        explanation: "Подача патронов при стрельбе производится из коробчатого магазина ёмкостью 45 патронов. Это указано в тексте и в таблице характеристик."
+    },
+    {
+        question: "Какой калибр у РПК-74?",
+        options: ["5,45 мм", "7,62 мм", "9 мм", "12,7 мм"],
+        correct: 0,
+        explanation: "Калибр РПК-74 — 5,45 мм. Используется патрон 5,45x39 мм — тот же, что и в АК-74. Калибр 7,62 мм — у РПК (предыдущей модели)."
+    },
+    {
+        question: "Какова масса РПК-74 со снаряженным магазином?",
+        options: ["5,46 кг", "4,5 кг", "5,0 кг", "6,0 кг"],
+        correct: 0,
+        explanation: "Масса РПК-74 со снаряжённым магазином — 5,46 кг. Масса без патронов — 5,0 кг. Эти значения приведены в таблице характеристик."
+    },
+    {
+        question: "Какова масса РПК-74 без патронов?",
+        options: ["5,0 кг", "4,5 кг", "5,46 кг", "6,0 кг"],
+        correct: 0,
+        explanation: "Масса РПК-74 без патронов — 5,0 кг. Со снаряжённым магазином — 5,46 кг."
+    },
+    {
+        question: "Какова длина РПК-74?",
+        options: ["1060 мм", "940 мм", "1000 мм", "1100 мм"],
+        correct: 0,
+        explanation: "Длина РПК-74 — 1060 мм; длина ствола — 590 мм. Эти значения приведены в таблице характеристик."
+    },
+    {
+        question: "Какова длина ствола РПК-74?",
+        options: ["590 мм", "415 мм", "500 мм", "650 мм"],
+        correct: 0,
+        explanation: "Длина ствола РПК-74 — 590 мм, что значительно больше, чем у АК-74 (415 мм без ДТК). Это обеспечивает большую начальную скорость пули."
+    },
+    {
+        question: "Какова прицельная дальность РПК-74?",
+        options: ["1000 м", "800 м", "900 м", "1100 м"],
+        correct: 0,
+        explanation: "Прицельная дальность РПК-74 — 1000 м, как и у АК-74. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова дальность эффективного огня РПК-74?",
+        options: ["до 800 м", "до 500 м", "до 600 м", "до 1000 м"],
+        correct: 0,
+        explanation: "Дальность эффективного огня РПК-74 — до 800 м. Это больше, чем у АК-74 (до 500 м), что обусловлено наличием сошки и более длинным стволом."
+    },
+    {
+        question: "Какова максимальная дальность РПК-74?",
+        options: ["3150 м", "2500 м", "3000 м", "3500 м"],
+        correct: 0,
+        explanation: "Максимальная дальность полёта пули РПК-74 — 3150 м. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова дальность прямого выстрела по грудной фигуре из РПК-74?",
+        options: ["460 м", "350 м", "400 м", "500 м"],
+        correct: 0,
+        explanation: "Дальность прямого выстрела по грудной фигуре — 460 м. Это больше, чем у АК-74 (440 м), за счёт более высокой начальной скорости пули."
+    },
+    {
+        question: "Какова дальность прямого выстрела по ростовой фигуре из РПК-74?",
+        options: ["640 м", "550 м", "600 м", "700 м"],
+        correct: 0,
+        explanation: "Дальность прямого выстрела по ростовой фигуре — 640 м. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова боевая скорострельность РПК-74 при стрельбе одиночными выстрелами?",
+        options: ["50 выстр/мин", "40 выстр/мин", "60 выстр/мин", "70 выстр/мин"],
+        correct: 0,
+        explanation: "Боевая скорострельность при одиночной стрельбе — 50 выстр/мин. Это больше, чем у АК-74 (40 выстр/мин), за счёт более устойчивого положения при стрельбе с сошки."
+    },
+    {
+        question: "Какова боевая скорострельность РПК-74 при стрельбе очередями?",
+        options: ["150 выстр/мин", "100 выстр/мин", "200 выстр/мин", "250 выстр/мин"],
+        correct: 0,
+        explanation: "Боевая скорострельность при стрельбе очередями — 150 выстр/мин. Это больше, чем у АК-74 (100 выстр/мин)."
+    },
+    {
+        question: "Какой темп стрельбы у РПК-74?",
+        options: ["600-650 выстр/мин", "550-600 выстр/мин", "650-700 выстр/мин", "700-750 выстр/мин"],
+        correct: 0,
+        explanation: "Темп стрельбы (техническая скорострельность) РПК-74 — 600-650 выстр/мин. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова начальная скорость пули РПК-74?",
+        options: ["960 м/с", "910 м/с", "1000 м/с", "1050 м/с"],
+        correct: 0,
+        explanation: "Начальная скорость пули РПК-74 — 960 м/с, что выше, чем у АК-74 (910 м/с), за счёт более длинного ствола (590 мм против 415 мм)."
+    },
+    {
+        question: "Какой патрон используется в РПК-74?",
+        options: ["5,45x39 мм", "7,62x39 мм", "9x18 мм", "7,62x54 мм"],
+        correct: 0,
+        explanation: "В РПК-74 используется патрон 5,45x39 мм — тот же, что и в АК-74. Патрон 7,62x39 мм применяется в РПК (предыдущей модели), 7,62x54 мм — в пулемёте ПК."
+    },
+    {
+        question: "Сколько нарезов в стволе РПК-74?",
+        options: ["4", "2", "3", "5"],
+        correct: 0,
+        explanation: "Канал ствола РПК-74 имеет четыре нареза, как и у АК-74. Нарезы служат для придания пуле вращательного движения."
+    },
+    {
+        question: "Для чего служит сошка пулемета?",
+        options: [
+            "Для упора при стрельбе",
+            "Для хранения патронов",
+            "Для прицеливания",
+            "Для защиты частей пулемёта от загрязнения"
+        ],
+        correct: 0,
+        explanation: "Сошка пулемёта служит упором при стрельбе. Она обеспечивает устойчивость оружия, что повышает кучность и эффективность огня."
+    },
+    {
+        question: "Что имеет сошка пулемета?",
+        options: [
+            "Основание, две ноги с полозками и выступами, пружину, пружинную застежку",
+            "Только основание и две ноги",
+            "Только две ноги и пружину",
+            "Только основание и пружинную застежку"
+        ],
+        correct: 0,
+        explanation: "Сошка имеет основание, две ноги с полозками для упора в грунт и выступами для фиксации ног в сложенном положении, пружину для разведения ног и пружинную застёжку на левой ноге."
+    },
+    {
+        question: "Отделяется ли сошка от пулемета?",
+        options: [
+            "Не отделяется",
+            "Отделяется при разборке",
+            "Отделяется только при чистке",
+            "Отделяется при замене ствола"
+        ],
+        correct: 0,
+        explanation: "Сошка от пулемёта не отделяется — это указано в тексте. Она постоянно закреплена на оружии."
+    },
+    {
+        question: "Для чего служит пламегаситель пулемета?",
+        options: [
+            "Для уменьшения величины пламени при выстреле",
+            "Для увеличения дальности полёта пули",
+            "Для уменьшения отдачи при выстреле",
+            "Для защиты ствола от загрязнения"
+        ],
+        correct: 0,
+        explanation: "Пламегаситель пулемёта служит для уменьшения величины пламени при выстреле. Это демаскирующий фактор, который важно снизить."
+    },
+    {
+        question: "Назначение каких частей РПК-74 аналогично автомату АК-74?",
+        options: [
+            "Назначение остальных основных частей и механизмов",
+            "Только назначение ствола",
+            "Только назначение затвора",
+            "Только назначение магазина"
+        ],
+        correct: 0,
+        explanation: "Согласно тексту, назначение остальных основных частей и механизмов, а также принцип работы РПК-74 аналогичны автомату Калашникова АК-74."
+    },
+    {
+        question: "Принцип работы РПК-74 аналогичен какому оружию?",
+        options: [
+            "Автомату Калашникова АК-74",
+            "Пистолету Макарова",
+            "Снайперской винтовке",
+            "Ручному гранатомету"
+        ],
+        correct: 0,
+        explanation: "Принцип работы РПК-74 аналогичен автомату Калашникова АК-74. Оба построены на использовании энергии пороховых газов, отводимых через отверстие в стенке ствола."
+    },
+    {
+        question: "Какова масса патрона РПК-74?",
+        options: ["10,3 г", "8 г", "9 г", "12 г"],
+        correct: 0,
+        explanation: "Масса патрона РПК-74 — 10,3 г; масса пули — 3,4 г. Эти значения приведены в таблице характеристик."
+    },
+    {
+        question: "Какова масса пули РПК-74?",
+        options: ["3,4 г", "2,4 г", "4,4 г", "5,4 г"],
+        correct: 0,
+        explanation: "Масса пули РПК-74 — 3,4 г. Масса всего патрона — 10,3 г. Это тот же патрон, что и в АК-74."
+    },
+    {
+        question: "Для чего нужны полозки на ногах сошки?",
+        options: [
+            "Для упора в грунт",
+            "Для фиксации ног в сложенном положении",
+            "Для уменьшения массы пулемёта",
+            "Для прицеливания"
+        ],
+        correct: 0,
+        explanation: "Полозки на ногах сошки предназначены для упора в грунт. Выступы же служат для фиксации ног в сложенном положении."
+    },
+    {
+        question: "Для чего нужны выступы на ногах сошки?",
+        options: [
+            "Для фиксации ног в сложенном положении",
+            "Для упора в грунт",
+            "Для уменьшения массы пулемёта",
+            "Для прицеливания"
+        ],
+        correct: 0,
+        explanation: "Выступы на ногах сошки предназначены для фиксации ног в сложенном положении. Для упора в грунт служат полозки."
+    },
+    {
+        question: "Для чего нужна пружина в сошке?",
+        options: [
+            "Для разведения ног",
+            "Для сжатия ног",
+            "Для фиксации в грунте",
+            "Для амортизации при стрельбе"
+        ],
+        correct: 0,
+        explanation: "Пружина в сошке предназначена для разведения ног. Для скрепления ног в сложенном положении служит пружинная застёжка на левой ноге."
+    },
+    {
+        question: "Для чего нужна пружинная застежка на левой ноге сошки?",
+        options: [
+            "Для скрепления ног в сложенном положении",
+            "Для разведения ног",
+            "Для фиксации в грунте",
+            "Для амортизации при стрельбе"
+        ],
+        correct: 0,
+        explanation: "Пружинная застёжка на левой ноге сошки служит для скрепления ног в сложенном положении. Для разведения ног предназначена пружина."
+    },
+    {
+        question: "Какая дальность стрельбы РПК-74 с сохранением убойной силы?",
+        options: ["1350 м", "1150 м", "1250 м", "1450 м"],
+        correct: 0,
+        explanation: "Дальность стрельбы с сохранением убойной силы у РПК-74 — 1350 м. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Из какого магазина производится подача патронов в РПК-74?",
+        options: [
+            "Из коробчатого магазина",
+            "Из дискового магазина",
+            "Из барабанного магазина",
+            "Из ленточного магазина"
+        ],
+        correct: 0,
+        explanation: "Подача патронов в РПК-74 производится из коробчатого магазина ёмкостью 45 патронов. Это указано в тексте раздела."
+    },
+
+    // --- ВОПРОСЫ С НЕСКОЛЬКИМИ ПРАВИЛЬНЫМИ ОТВЕТАМИ ---
+    {
+        multiple: true,
+        question: "Из каких основных частей и механизмов состоит РПК-74? (выберите все правильные)",
+        options: [
+            "Ствол со ствольной коробкой, с прицельным приспособлением и прикладом",
+            "Затворная рама с газовым поршнем",
+            "Затвор",
+            "Возвратный механизм",
+            "Сошка"
+        ],
+        correct: [0, 1, 2, 3, 4],
+        explanation: "Все перечисленные элементы входят в состав РПК-74. Кроме них, в пулемёт входят крышка ствольной коробки, газовая трубка со ствольной накладкой, ударно-спусковой механизм, цевьё, магазин и пламегаситель."
+    },
+    {
+        multiple: true,
+        question: "Что имеет сошка пулемета? (выберите все правильные)",
+        options: [
+            "Основание",
+            "Две ноги с полозками для упора в грунт",
+            "Выступы для фиксации ног в сложенном положении",
+            "Пружину для разведения ног",
+            "Пружинную застежку на левой ноге"
+        ],
+        correct: [0, 1, 2, 3, 4],
+        explanation: "Сошка имеет все перечисленные элементы: основание, две ноги с полозками и выступами, пружину для разведения ног и пружинную застёжку на левой ноге для скрепления ног в сложенном положении."
+    },
+    {
+        multiple: true,
+        question: "Какие утверждения о РПК-74 верны? (выберите все правильные)",
+        options: [
+            "Предназначен для уничтожения живой силы и поражения огневых средств противника",
+            "Основным видом огня является автоматический огонь",
+            "Длинная очередь — до 15 выстрелов",
+            "Подача патронов — из коробчатого магазина ёмкостью 45 патронов",
+            "Принцип работы основан на отводе пороховых газов через отверстие в стенке ствола"
+        ],
+        correct: [0, 1, 2, 3, 4],
+        explanation: "Все утверждения верны. РПК-74 предназначен для поражения живой силы и огневых средств, основной огонь — автоматический, длинная очередь — до 15 выстрелов, магазин на 45 патронов, принцип работы аналогичен АК-74 (отвод пороховых газов)."
+    },
+    {
+        multiple: true,
+        question: "Чем РПК-74 отличается от АК-74? (выберите все правильные)",
+        options: [
+            "Наличием сошки для упора при стрельбе",
+            "Наличием пламегасителя",
+            "Большей ёмкостью магазина (45 патронов против 30)",
+            "Большей длиной ствола (590 мм против 415 мм)",
+            "Возможностью ведения автоматического огня"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Отличия РПК-74 от АК-74: наличие сошки, пламегасителя, магазин на 45 патронов и более длинный ствол (590 мм против 415 мм). Возможность ведения автоматического огня есть у обоих образцов."
+    },
+    {
+        multiple: true,
+        question: "Какие характеристики РПК-74 совпадают с АК-74? (выберите все правильные)",
+        options: [
+            "Калибр — 5,45 мм",
+            "Используемый патрон — 5,45x39 мм",
+            "Прицельная дальность — 1000 м",
+            "Количество нарезов в стволе — 4",
+            "Ёмкость магазина — 45 патронов"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "С АК-74 совпадают: калибр 5,45 мм, патрон 5,45x39 мм, прицельная дальность 1000 м и 4 нареза в стволе. Ёмкость магазина у РПК-74 — 45 патронов, а у АК-74 — 30 патронов, поэтому этот пункт не совпадает."
+    }
+];
+
+// ============================================
+// ЛОГИКА ТЕСТА
+// ============================================
+var currentQuestions = [];
+var selectedAnswers = {};
+var usedQuestionIndices = [];
+
+var QUESTIONS_PER_TEST = 10;
+
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
+function getRandomQuestions() {
+    if (usedQuestionIndices.length + QUESTIONS_PER_TEST > questionBank.length) {
+        usedQuestionIndices = [];
+    }
+
+    var availableIndices = [];
+    for (var i = 0; i < questionBank.length; i++) {
+        if (usedQuestionIndices.indexOf(i) === -1) {
+            availableIndices.push(i);
+        }
+    }
+
+    availableIndices = shuffleArray(availableIndices);
+    var chosenIndices = availableIndices.slice(0, QUESTIONS_PER_TEST);
+
+    for (var k = 0; k < chosenIndices.length; k++) {
+        usedQuestionIndices.push(chosenIndices[k]);
+    }
+
+    var result = [];
+    for (var m = 0; m < chosenIndices.length; m++) {
+        result.push(prepareQuestion(questionBank[chosenIndices[m]]));
+    }
+    return result;
+}
+
+function prepareQuestion(q) {
+    var isMulti = !!q.multiple;
+    var indices = [];
+    for (var i = 0; i < q.options.length; i++) indices.push(i);
+    var shuffledIndices = shuffleArray(indices);
+
+    var newOptions = [];
+    for (var j = 0; j < shuffledIndices.length; j++) {
+        newOptions.push(q.options[shuffledIndices[j]]);
+    }
+
+    var newCorrect;
+    if (isMulti) {
+        newCorrect = [];
+        for (var c = 0; c < q.correct.length; c++) {
+            newCorrect.push(shuffledIndices.indexOf(q.correct[c]));
+        }
+        newCorrect.sort(function(a, b) { return a - b; });
+    } else {
+        newCorrect = shuffledIndices.indexOf(q.correct);
+    }
+
+    return {
+        question: q.question,
+        options: newOptions,
+        correct: newCorrect,
+        multiple: isMulti,
+        explanation: q.explanation || ''
+    };
+}
+
+function renderTest() {
+    currentQuestions = getRandomQuestions();
+    selectedAnswers = {};
+    var container = document.getElementById('testContainer');
+    var html = '';
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var cls = q.multiple ? 'question-block multi' : 'question-block';
+        html += '<div class="' + cls + '" id="q' + i + '">';
+        html += '<p>' + (i + 1) + '. ' + q.question + '</p>';
+        if (q.multiple) {
+            html += '<div class="hint">Выберите все правильные варианты</div>';
+        }
+        for (var j = 0; j < q.options.length; j++) {
+            html += '<label id="q' + i + '_opt' + j + '">';
+            var inputType = q.multiple ? 'checkbox' : 'radio';
+            html += '<input type="' + inputType + '" name="q' + i + '" value="' + j + '"> ';
+            html += q.options[j];
+            html += '</label>';
+        }
+        html += '<div class="feedback" id="fb' + i + '" style="display:none;"></div>';
+        html += '<div class="correct-list" id="cl' + i + '" style="display:none;"></div>';
+        html += '<div class="explanation" id="ex' + i + '" style="display:none;"></div>';
+        html += '</div>';
+    }
+    container.innerHTML = html;
+    document.getElementById('resultBox').style.display = 'none';
+    document.getElementById('resultBox').innerHTML = '';
+
+    container.onchange = function(e) {
+        var target = e.target;
+        if (target.tagName !== 'INPUT') return;
+        var name = target.name;
+        var qIndex = parseInt(name.substring(1), 10);
+        var q = currentQuestions[qIndex];
+        if (!q) return;
+
+        if (q.multiple) {
+            var checked = [];
+            var boxes = container.querySelectorAll('input[name="' + name + '"]:checked');
+            for (var b = 0; b < boxes.length; b++) {
+                checked.push(parseInt(boxes[b].value, 10));
+            }
+            checked.sort(function(a, b) { return a - b; });
+            selectedAnswers[name] = checked;
+        } else {
+            selectedAnswers[name] = parseInt(target.value, 10);
+        }
+    };
+}
+
+function arraysEqual(a, b) {
+    if (!a || !b) return false;
+    if (a.length !== b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+function checkTest() {
+    var correct = 0;
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var selected = selectedAnswers['q' + i];
+        var qBlock = document.getElementById('q' + i);
+        var fb = document.getElementById('fb' + i);
+        var cl = document.getElementById('cl' + i);
+        var ex = document.getElementById('ex' + i);
+        var isCorrect = false;
+
+        for (var opt = 0; opt < q.options.length; opt++) {
+            var lbl = document.getElementById('q' + i + '_opt' + opt);
+            if (lbl) {
+                lbl.classList.remove('answer-correct', 'answer-wrong-selected', 'answer-correct-not-selected');
+            }
+        }
+
+        if (q.multiple) {
+            var correctArr = q.correct;
+            var selectedArr = (selected !== undefined) ? selected : [];
+
+            for (var m = 0; m < q.options.length; m++) {
+                var lblM = document.getElementById('q' + i + '_opt' + m);
+                if (!lblM) continue;
+                var isCorr = correctArr.indexOf(m) !== -1;
+                var isSel = selectedArr.indexOf(m) !== -1;
+                if (isCorr && isSel) {
+                    lblM.classList.add('answer-correct');
+                } else if (!isCorr && isSel) {
+                    lblM.classList.add('answer-wrong-selected');
+                } else if (isCorr && !isSel) {
+                    lblM.classList.add('answer-correct-not-selected');
+                }
+            }
+
+            if (selectedArr.length > 0 && arraysEqual(selectedArr, correctArr)) {
+                isCorrect = true;
+            }
+        } else {
+            var correctIdx = q.correct;
+            for (var n = 0; n < q.options.length; n++) {
+                var lblN = document.getElementById('q' + i + '_opt' + n);
+                if (!lblN) continue;
+                var isCorrN = (n === correctIdx);
+                var isSelN = (selected === n);
+                if (isCorrN) {
+                    lblN.classList.add('answer-correct');
+                } else if (isSelN) {
+                    lblN.classList.add('answer-wrong-selected');
+                }
+            }
+            if (selected !== undefined && selected === correctIdx) {
+                isCorrect = true;
+            }
+        }
+
+        if (isCorrect) {
+            correct++;
+            qBlock.style.borderLeftColor = '#1f7a1f';
+            fb.className = 'feedback ok';
+            fb.style.display = 'block';
+            fb.textContent = '✔ Верно';
+            cl.style.display = 'none';
+        } else {
+            qBlock.style.borderLeftColor = '#8b0000';
+            fb.className = 'feedback fail';
+            fb.style.display = 'block';
+            fb.textContent = '✘ Неверно';
+
+            var listHtml = '<strong>Правильные варианты:</strong><ul>';
+            if (q.multiple) {
+                for (var c = 0; c < q.correct.length; c++) {
+                    listHtml += '<li>' + q.options[q.correct[c]] + '</li>';
+                }
+            } else {
+                listHtml += '<li>' + q.options[q.correct] + '</li>';
+            }
+            listHtml += '</ul>';
+            cl.innerHTML = listHtml;
+            cl.style.display = 'block';
+        }
+
+        // Пояснение правильного ответа показывается ВСЕГДА
+        if (q.explanation) {
+            ex.innerHTML = '<strong>Пояснение:</strong> ' + q.explanation;
+            ex.style.display = 'block';
+        } else {
+            ex.style.display = 'none';
+        }
+    }
+
+    var grade, gradeText, gradeClass;
+    if (correct === 10) { grade = 5; gradeText = 'Отлично!'; gradeClass = 'grade-5'; }
+    else if (correct === 9) { grade = 4; gradeText = 'Хорошо!'; gradeClass = 'grade-4'; }
+    else if (correct === 8) { grade = 3; gradeText = 'Удовлетворительно'; gradeClass = 'grade-3'; }
+    else { grade = 2; gradeText = 'Неудовлетворительно. Требуется повторное изучение!'; gradeClass = 'grade-2'; }
+
+    var resultBox = document.getElementById('resultBox');
+    resultBox.style.display = 'block';
+    resultBox.className = 'result-box';
+    resultBox.innerHTML = '<div class="' + gradeClass + '">' +
+        '<p style="font-size: 28px;">Ваша оценка: ' + grade + '</p>' +
+        '<p style="font-size: 22px;">' + gradeText + '</p>' +
+        '<p style="font-size: 18px; margin-top: 10px;">Правильных ответов: ' + correct + ' из 10</p>' +
+        '</div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetTest() {
+    renderTest();
+    var section = document.querySelector('.test-section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+window.onload = function() {
+    renderTest();
+};
+</script>
+</body>
+</html>

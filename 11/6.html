@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомат Калашникова - Огневая подготовка</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <style>
+        .question-block.multi {
+            border-left-color: #1f5f8b;
+        }
+        .question-block .hint {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin: 4px 0 8px 0;
+        }
+        .question-block label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .question-block label.answer-correct {
+            background: #d6f5d6;
+            border-left: 3px solid #1f7a1f;
+        }
+        .question-block label.answer-wrong-selected {
+            background: #f8d6d6;
+            border-left: 3px solid #8b0000;
+            text-decoration: line-through;
+        }
+        .question-block label.answer-correct-not-selected {
+            background: #fff7d6;
+            border-left: 3px solid #b8860b;
+        }
+        .question-block .feedback {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-indent: 0;
+        }
+        .question-block .feedback.ok {
+            color: #1f7a1f;
+            background: #e6f7e6;
+        }
+        .question-block .feedback.fail {
+            color: #8b0000;
+            background: #f7e6e6;
+        }
+        .question-block .correct-list {
+            font-size: 14px;
+            color: #333;
+            background: #f0f4f8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .correct-list strong {
+            color: #1f5f8b;
+        }
+        .question-block .correct-list ul {
+            margin: 4px 0 0 20px;
+            padding: 0;
+        }
+        .question-block .correct-list li {
+            margin: 2px 0;
+        }
+        .question-block .explanation {
+            font-size: 14px;
+            color: #333;
+            background: #eef6ee;
+            border-left: 3px solid #1f7a1f;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .explanation strong {
+            color: #1f5f8b;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="top">
+    <!-- ===== ШАПКА С НАВИГАЦИЕЙ ===== -->
+    <div class="header">
+        <div class="header-left">
+            <span class="star">★</span>
+            <h1>Огневая подготовка</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">★ Главная</a>
+            <a href="5.html">◀ Предыдущая</a>
+            <a href="7.html">Следующая ▶</a>
+        </div>
+    </div>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2>Назначение, боевые свойства, материальная часть и применение автомата Калашникова АК-74.</h2>
+        
+        <p><strong>5,45-мм автомат Калашникова</strong> является индивидуальным оружием и предназначен для уничтожения живой силы и поражения огневых средств противника (рис. 1). Для поражения противника в рукопашном бою к автомату присоединяется штык-нож.</p>
+        
+        <p>Из автомата ведется автоматический или одиночный огонь. Автоматический огонь является основным видом огня из автомата, он ведется короткими (до 5 выстрелов) и длинными (до 10 выстрелов) очередями и непрерывно. Подача патронов при стрельбе производится из коробчатого магазина емкостью 30 патронов.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 1 ===== -->
+<div class="figure">
+    <img src="Рис. 15.jpg" alt="Автомат Калашникова АК-74" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+<<p>Рис. 1. Автомат Калашникова АК-74.</p>
+        
+        <p><strong>Основные боевые характеристики автомата Калашникова АК-74 приведены в табл. 3.</strong></p>
+        
+        <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse; margin:15px 0; font-size:15px; border-color:#5a4d3a;">
+            <thead>
+                <tr style="background:#cbc4b2;">
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">№ п/п</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Характеристики АК-74</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1.</td><td style="border:1px solid #5a4d3a; padding:5px;">Калибр, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5,45</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">2.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса со снаряжённым магазином, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,6</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса без патронов, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,3</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">4.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина без штык-ножа, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">940</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина с примкнутым штык-ножом, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1089</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">6.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина ствола без ДТК, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">415</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">7.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина ствола с ДТК, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">485</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">8.</td><td style="border:1px solid #5a4d3a; padding:5px;">Ширина, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">70</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">9.</td><td style="border:1px solid #5a4d3a; padding:5px;">Высота, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">195</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">10.</td><td style="border:1px solid #5a4d3a; padding:5px;">Прицельная дальность, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1000</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">11.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность эффективного огня, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">до 500</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">12.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность стрельбы с сохранением убойной силы, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1350</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">13.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность прямого выстрела по грудной фигуре, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">440</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">14.</td><td style="border:1px solid #5a4d3a; padding:5px;">Дальность прямого выстрела по ростовой фигуре, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">625</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">15.</td><td style="border:1px solid #5a4d3a; padding:5px;">Боевая скорострельность: при стрельбе одиночными выстрелами, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">40</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">16.</td><td style="border:1px solid #5a4d3a; padding:5px;">Боевая скорострельность: при стрельбе очередями, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">100</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">17.</td><td style="border:1px solid #5a4d3a; padding:5px;">Темп стрельбы, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">650</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">18.</td><td style="border:1px solid #5a4d3a; padding:5px;">Начальная скорость пули, м/с</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">910</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">19.</td><td style="border:1px solid #5a4d3a; padding:5px;">Ёмкость магазина, патрон</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">30</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20.</td><td style="border:1px solid #5a4d3a; padding:5px;">Патрон</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5,45x39 мм</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">21.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса патрона, г</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">10,3</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">22.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса пули, г</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,4</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">23.</td><td style="border:1px solid #5a4d3a; padding:5px;">Количество нарезов в стволе, шт.</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">4</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">24.</td><td style="border:1px solid #5a4d3a; padding:5px;">Вес штык-ножа, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">0,3</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">25.</td><td style="border:1px solid #5a4d3a; padding:5px;">Вес штык-ножа с ножнами, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">0,49</td></tr>
+            </tbody>
+        </table>
+        
+        <p><strong>В комплект автомата входят:</strong> принадлежность, ремень, сумка для магазинов.</p>
+        
+        <p>Принадлежности служат для разборки, сборки, чистки, смазки автомата и ускоренного снаряжения магазина патронами.</p>
+        
+        <p><strong>К принадлежностям автомата относятся</strong> шомпол, пенал, протирка, ёршик, отвёртка, выколотка, шпилька, маслёнка, переходник и 2 обоймы.</p>
+        
+        <p><strong>Автомат Калашникова АК-74 состоит из следующих основных частей и механизмов:</strong></p>
+        <ul>
+            <li>ствола со ствольной коробкой, с прицельным приспособлением и прикладом;</li>
+            <li>крышки ствольной коробки;</li>
+            <li>затворной рамы с газовым поршнем;</li>
+            <li>затвора;</li>
+            <li>возвратного механизма;</li>
+            <li>газовой трубки со ствольной накладкой;</li>
+            <li>ударно-спускового механизма;</li>
+            <li>цевья;</li>
+            <li>магазина;</li>
+            <li>штык-ножа;</li>
+            <li>дульного тормоза-компенсатора.</li>
+        </ul>
+        
+        <p><strong>Ствол</strong> служит для направления полета пули. Внутри ствол имеет канал с четырьмя нарезами, вьющимися слева вверх направо. Нарезы служат для придания пуле вращательного движения.</p>
+        
+        <p><strong>Дульный тормоз-компенсатор</strong> служит для повышения кучности боя при стрельбе очередями из неустойчивых положений (на ходу, стоя, с колена).</p>
+        
+        <p><strong>Газовая камера</strong> служит для направления пороховых газов из ствола на газовый поршень затворной рамы; она имеет патрубок с каналом для газового поршня и с отверстиями для выхода пороховых газов, наклонное газоотводное отверстие и упор для рукоятки штыка-ножа. В проушине упора помещается шомпол.</p>
+        
+        <p><strong>Ствольная коробка</strong> служит для соединения частей и механизмов автомата, для обеспечения закрывания канала ствола затвором и запирания затвора.</p>
+        
+        <p><strong>Прицельное приспособление</strong> служит для наводки автомата при стрельбе по целям на различные расстояния. Оно состоит из прицела и мушки.</p>
+        
+        <p><strong>Крышка ствольной коробки</strong> предохраняет от загрязнения части и механизмы, помещенные в ствольной коробке.</p>
+        
+        <p><strong>Затворная рама с газовым поршнем</strong> служит для приведения в действие затвора и ударно-спускового механизма.</p>
+        
+        <p><strong>Затвор</strong> служит для досылания патрона в патронник, закрывания канала ствола, разбивания капсюля и извлечения из патронника гильзы (патрона).</p>
+        
+        <p><strong>Возвратный механизм</strong> служит для возвращения затворной рамы с затвором в переднее положение. Он состоит из возвратной пружины, направляющего стержня, подвижного стержня и муфты.</p>
+        
+        <p><strong>Газовая трубка</strong> служит для направления движения газового поршня.</p>
+        
+        <p><strong>Ствольная накладка</strong> служит для предохранения рук автоматчика от ожогов при стрельбе.</p>
+        
+        <p><strong>Ударно-спусковой механизм</strong> служит для спуска курка с боевого взвода или со взвода автоспуска, нанесения удара по ударнику, обеспечения ведения автоматического или одиночного огня, прекращения стрельбы, для предотвращения выстрелов при незапертом затворе и для постановки автомата на предохранитель.</p>
+        
+        <p><strong>Переводчик</strong> служит для установки автомата на автоматический или одиночный огонь, или на предохранитель.</p>
+        
+        <p><strong>Цевье</strong> служит для удобства действия и для предохранения рук автоматчика от ожогов.</p>
+        
+        <p><strong>Штык-нож</strong> присоединяется к автомату перед атакой и служит для поражения противника в рукопашном бою. В остальное время он используется в качестве ножа, пилы (для распиловки металла) и ножниц (для резки проволоки).</p>
+        
+        <p><strong>Принцип действия АК-74</strong> основан на использовании энергии пороховых газов, отводимых через верхнее отверстие в стенке ствола.</p>
+        
+        <p>АК-74 имеет множество положительных качеств и пока ещё пригоден для вооружения, но уже очевидна необходимость его замены на более современные модели.</p>
+
+         <!-- ===== ВИДИО: РАБОТА ЧАСТЕЙ И МЕХАНИЗМОВ АК ===== -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;">🎬 Работа частей и механизмов автомата Калашникова</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 15.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="Работа частей и механизмов автомата Калашникова_360p.mp4" type="video/mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="Работа частей и механизмов автомата Калашникова_360p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: работа частей и механизмов АК-74 при стрельбе
+    </p>
+</div>
+        
+        <h3>Разборка и сборка автомата АК-74М</h3>
+        
+        <p>Разборка автомата может быть неполная и полная. Неполная служит для чистки, смазки и осмотра автомата; полная – для чистки при сильном загрязнении автомата, после нахождения его под дождем или в снегу, при переходе на новую смазку и при ремонте. Излишне частая разборка автомата вредна, так как ускоряет изнашивание частей и механизмов.</p>
+        
+        <p><strong>Порядок неполной разборки автомата:</strong></p>
+        
+        <p><strong>1. Отделить магазин (рис. 2).</strong> Удерживая автомат левой рукой за шейку приклада или цевье, правой рукой обхватить магазин. Нажимая большим пальцем на защелку, подать нижнюю часть магазина ВПЕРЕД и отделить его. После этого проверить, нет ли патрона в патроннике, для чего опустить переводчик вниз, отвести рукоятку затворной рамы назад, осмотреть патронник, отпустить рукоятку затворной рамы и спустить курок с боевого взвода.</p>
+        
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 2 ===== -->
+<div class="figure">
+    <img src="Рис. 16.jpg" alt="Отделить магазин" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 2. Отделить магазин</p>
+        
+        <p><strong>2. Вынуть пенал с принадлежностью (рис. 3).</strong> Утопить пальцем правой руки крышку гнезда приклада так, чтобы пенал под действием пружины вышел из гнезда. Раскрыть пенал и вынуть из него протирку, ершик, отвертку, выколотку и шпильку.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 3 ===== -->
+<div class="figure">
+    <img src="Рис. 17.jpg" alt="Вынуть пенал" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 3. Вынуть пенал с принадлежностью</p>
+        
+        <p>У автомата со складывающимся прикладом пенал расположен в кармане сумки для магазинов.</p>
+        
+        <p><strong>3. Отделить шомпол (рис. 4).</strong> Оттянуть конец шомпола от ствола так, чтобы его головка вышла из-под упора на основании мушки, и вынуть шомпол вверх. При отделении шомпола разрешается пользоваться выколоткой.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 4 ===== -->
+<div class="figure">
+    <img src="Рис. 18.jpg" alt="Отделить шомпол" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 4. Отделить шомпол</p>
+        
+        <p><strong>4. Отделить крышку ствольной коробки (рис. 5).</strong> Левой рукой обхватить шейку приклада, большим пальцем этой руки нажать на выступ направляющего стержня возвратного механизма, правой рукой приподнять вверх заднюю часть крышки ствольной коробки и отделить крышку.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 5 ===== -->
+<div class="figure">
+    <img src="Рис. 19.jpg" alt=" Отделить крышку ствольной коробки" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 5. Отделить крышку ствольной коробки</p>
+        
+        <p><strong>5. Отделить возвратный механизм (рис. 6).</strong> Удерживая автомат левой рукой за шейку приклада, правой рукой подать ВПЕРЕД направляющий стержень возвратного механизма до выхода его пятки из продольного паза ствольной коробки; приподнять задний конец направляющего стержня и извлечь возвратный механизм из канала затворной рамы.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 6 ===== -->
+<div class="figure">
+    <img src="Рис. 20.jpg" alt="Отделить возвратный механизм" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 6. Отделить возвратный механизм</p>
+        
+        <p><strong>6. Отделить затворную раму с затвором (рис. 7).</strong> Продолжая удерживать автомат левой рукой, правой рукой отвести затворную раму назад до отказа, приподнять ее вместе с затвором и отделить от ствольной коробки.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 7 ===== -->
+<div class="figure">
+    <img src="Рис. 21.jpg" alt="Отделить затворную раму с затвором" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 7. Отделить затворную раму с затвором</p>
+        
+        <p><strong>7. Отделить затвор от затворной рамы (рис. 8).</strong> Взять затворную раму в левую руку затвором кверху; правой рукой отвести затвор назад, повернуть его так, чтобы ведущий выступ затвора вышел из фигурного выреза затворной рамы, и вывести затвор ВПЕРЕД.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 8 ===== -->
+<div class="figure">
+    <img src="Рис. 22.jpg" alt=" Отделить затвор от затворной рамы" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 8. Отделить затвор от затворной рамы</p>
+        
+        <p><strong>8. Отделить газовую трубку со ствольной накладкой (рис. 9).</strong> Удерживая автомат левой рукой, правой рукой надеть пенал принадлежности прямоугольным отверстием на выступ замыкателя газовой трубки, повернуть замыкатель от себя до вертикального положения и снять газовую трубку с патрубка газовой камеры.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 9 ===== -->
+<div class="figure">
+    <img src="Рис. 23.jpg" alt="Отделить газовую трубку со ствольной накладкой" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 9. Отделить газовую трубку со ствольной накладкой</p>
+        
+        <p>Сборка осуществляется в обратной последовательности.</p>
+
+        <!-- ===== ВИДИО: АК 74, устройство, неполная разборка, сборка_1080 ===== -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;">🎬 АК 74, устройство, неполная разборка, сборка</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 15.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="АК 74, устройство, неполная разборка, сборка_1080p.mp4" type="video/mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="АК 74, устройство, неполная разборка, сборка_1080p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: АК 74, устройство, неполная разборка, сборка
+    </p>
+</div>
+        
+        <h3>Нормативы по огневой подготовке</h3>
+        
+        <p><strong>«Неполная разборка оружия».</strong></p>
+        
+        <p><strong>Условия (порядок) выполнения норматива:</strong> Оружие на подстилке, инструмент наготове. Обучаемый находится у оружия. Норматив выполняется одним обучаемым. Время отсчитывается от команды «К НЕПОЛНОЙ РАЗБОРКЕ ОРУЖИЯ ПРИСТУПИТЬ» до доклада обучаемого «ГОТОВО».</p>
+        
+        <p><strong>Вид оружия:</strong> автомат.</p>
+        
+        <p><strong>Оценка по времени:</strong> «отлично» – 15 с, «хорошо» – 17 с, «удовлетворительно» – 19 с.</p>
+        
+        <p><strong>«Сборка оружия после неполной разборки».</strong></p>
+        
+        <p><strong>Условия (порядок) выполнения норматива:</strong></p>
+        <ul>
+            <li>Оружие разобрано.</li>
+            <li>Части и механизмы аккуратно разложены на подстилке, инструмент наготове.</li>
+            <li>Обучаемый находится у оружия.</li>
+            <li>Норматив выполняется одним обучаемым.</li>
+            <li>Время отсчитывается от команды «К СБОРКЕ ОРУЖИЯ ПРИСТУПИТЬ» до доклада обучаемого «ГОТОВО».</li>
+        </ul>
+        
+        <p><strong>Вид оружия:</strong> автомат.</p>
+        
+        <p><strong>Оценка по времени:</strong> «отлично» – 25 с, «хорошо» – 27 с, «удовлетворительно» – 32 с.</p>
+
+        <!-- ===== ТЕСТ ===== -->
+        <div class="test-section">
+            <h3>📝 Контрольный тест по разделу</h3>
+            <div id="testContainer"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="test-btn" onclick="checkTest()">Проверить ответы</button>
+                <button class="test-btn" onclick="resetTest()">🔄 Начать заново</button>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <!-- ===== НИЖНЯЯ НАВИГАЦИЯ ===== -->
+    <div class="nav-bottom">
+        <a href="../index.html" class="nav-btn">★ Главная</a>
+        <a href="5.html" class="nav-btn">◀ Предыдущая</a>
+        <a href="7.html" class="nav-btn">Следующая ▶</a>
+        <a href="#top" class="nav-btn">▲ Вверх</a>
+    </div>
+
+    <div class="footer-note">
+        Москва 2026 г.
+    </div>
+</div>
+
+<script>
+// ============================================
+// БАЗА ВОПРОСОВ
+// multiple: true — вопрос с несколькими правильными ответами
+// correct для multiple — массив индексов правильных вариантов
+// explanation — пояснение правильного ответа
+// ============================================
+var questionBank = [
+    // --- ВОПРОСЫ С ОДНИМ ПРАВИЛЬНЫМ ОТВЕТОМ ---
+    {
+        question: "Для чего предназначен 5,45-мм автомат Калашникова?",
+        options: [
+            "Для уничтожения живой силы и поражения огневых средств противника",
+            "Для поражения бронированных целей и укреплений",
+            "Для ведения снайперского огня на большие дальности",
+            "Для метания гранат и постановки дымовых завес"
+        ],
+        correct: 0,
+        explanation: "Согласно тексту, 5,45-мм автомат Калашникова является индивидуальным оружием и предназначен для уничтожения живой силы и поражения огневых средств противника. Поражение бронированных целей — задача других средств, а снайперский огонь — задача снайперской винтовки."
+    },
+    {
+        question: "Что присоединяется к автомату для поражения противника в рукопашном бою?",
+        options: [
+            "Штык-нож",
+            "Магазин повышенной ёмкости",
+            "Приклад специальной конструкции",
+            "Дульный тормоз-компенсатор"
+        ],
+        correct: 0,
+        explanation: "Для поражения противника в рукопашном бою к автомату присоединяется штык-нож. Остальные элементы либо входят в конструкцию постоянно, либо не предназначены для рукопашного боя."
+    },
+    {
+        question: "Какие виды огня ведутся из автомата?",
+        options: [
+            "Автоматический или одиночный",
+            "Только автоматический",
+            "Только одиночный",
+            "Только очередями фиксированной длины"
+        ],
+        correct: 0,
+        explanation: "Из автомата ведётся автоматический или одиночный огонь. Автоматический огонь является основным, но одиночный также предусмотрен конструкцией."
+    },
+    {
+        question: "Какой вид огня является основным из автомата?",
+        options: [
+            "Автоматический огонь",
+            "Одиночный огонь",
+            "Снайперский огонь",
+            "Прицельный огонь"
+        ],
+        correct: 0,
+        explanation: "Основным видом огня из автомата является автоматический огонь. Он ведётся короткими (до 5 выстрелов) и длинными (до 10 выстрелов) очередями и непрерывно."
+    },
+    {
+        question: "Сколько выстрелов в короткой очереди?",
+        options: [
+            "До 5 выстрелов",
+            "До 3 выстрелов",
+            "До 10 выстрелов",
+            "До 15 выстрелов"
+        ],
+        correct: 0,
+        explanation: "Короткая очередь — до 5 выстрелов. Длинная очередь — до 10 выстрелов. Эти параметры заданы в тексте раздела."
+    },
+    {
+        question: "Сколько выстрелов в длинной очереди?",
+        options: [
+            "До 10 выстрелов",
+            "До 5 выстрелов",
+            "До 8 выстрелов",
+            "До 15 выстрелов"
+        ],
+        correct: 0,
+        explanation: "Длинная очередь — до 10 выстрелов. Это соответствует содержанию раздела о видах автоматического огня."
+    },
+    {
+        question: "Какова ёмкость магазина автомата?",
+        options: ["30 патронов", "20 патронов", "40 патронов", "50 патронов"],
+        correct: 0,
+        explanation: "Подача патронов при стрельбе производится из коробчатого магазина ёмкостью 30 патронов. Это указано в тексте и в таблице боевых характеристик."
+    },
+    {
+        question: "Какой калибр у автомата АК-74?",
+        options: ["5,45 мм", "7,62 мм", "9 мм", "12,7 мм"],
+        correct: 0,
+        explanation: "АК-74 имеет калибр 5,45 мм. Это отражено в самом названии автомата и в таблице характеристик."
+    },
+    {
+        question: "Какова масса автомата АК-74 без патронов?",
+        options: ["3,3 кг", "3,0 кг", "3,6 кг", "4,0 кг"],
+        correct: 0,
+        explanation: "Согласно таблице боевых характеристик, масса автомата без патронов составляет 3,3 кг. Масса со снаряжённым магазином — 3,6 кг."
+    },
+    {
+        question: "Какова длина автомата АК-74 без штык-ножа?",
+        options: ["940 мм", "890 мм", "990 мм", "1089 мм"],
+        correct: 0,
+        explanation: "Длина автомата без штык-ножа — 940 мм; с примкнутым штык-ножом — 1089 мм. Эти значения приведены в таблице."
+    },
+    {
+        question: "Какова прицельная дальность АК-74?",
+        options: ["1000 м", "800 м", "900 м", "1100 м"],
+        correct: 0,
+        explanation: "Прицельная дальность АК-74 составляет 1000 м. Это указано в таблице боевых характеристик."
+    },
+    {
+        question: "Какова дальность эффективного огня АК-74?",
+        options: ["до 500 м", "до 300 м", "до 400 м", "до 600 м"],
+        correct: 0,
+        explanation: "Дальность эффективного огня — до 500 м. Именно на этой дальности обеспечивается надёжное поражение целей."
+    },
+    {
+        question: "Какова дальность прямого выстрела по грудной фигуре?",
+        options: ["440 м", "350 м", "400 м", "500 м"],
+        correct: 0,
+        explanation: "Дальность прямого выстрела по грудной фигуре — 440 м. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова дальность прямого выстрела по ростовой фигуре?",
+        options: ["625 м", "550 м", "600 м", "650 м"],
+        correct: 0,
+        explanation: "Дальность прямого выстрела по ростовой фигуре — 625 м. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова боевая скорострельность при стрельбе одиночными выстрелами?",
+        options: ["40 выстр/мин", "30 выстр/мин", "50 выстр/мин", "60 выстр/мин"],
+        correct: 0,
+        explanation: "Боевая скорострельность при одиночной стрельбе — 40 выстр/мин. Это указано в таблице боевых характеристик."
+    },
+    {
+        question: "Какова боевая скорострельность при стрельбе очередями?",
+        options: ["100 выстр/мин", "80 выстр/мин", "120 выстр/мин", "150 выстр/мин"],
+        correct: 0,
+        explanation: "Боевая скорострельность при стрельбе очередями — 100 выстр/мин. Это указано в таблице боевых характеристик."
+    },
+    {
+        question: "Какой темп стрельбы у АК-74?",
+        options: ["650 выстр/мин", "550 выстр/мин", "600 выстр/мин", "700 выстр/мин"],
+        correct: 0,
+        explanation: "Темп стрельбы (техническая скорострельность) АК-74 — 650 выстр/мин. Это значение приведено в таблице."
+    },
+    {
+        question: "Какова начальная скорость пули АК-74?",
+        options: ["910 м/с", "860 м/с", "960 м/с", "1000 м/с"],
+        correct: 0,
+        explanation: "Начальная скорость пули АК-74 — 910 м/с. Это указано в таблице боевых характеристик."
+    },
+    {
+        question: "Какой патрон используется в АК-74?",
+        options: ["5,45x39 мм", "7,62x39 мм", "9x18 мм", "7,62x54 мм"],
+        correct: 0,
+        explanation: "В АК-74 используется патрон 5,45x39 мм. Патрон 7,62x39 мм применяется в АК-47 и АКМ, 9x18 мм — в пистолетах, 7,62x54 мм — в винтовках и пулемётах."
+    },
+    {
+        question: "Сколько нарезов в стволе АК-74?",
+        options: ["4", "2", "3", "5"],
+        correct: 0,
+        explanation: "Канал ствола АК-74 имеет четыре нареза, вьющиеся слева вверх направо. Нарезы служат для придания пуле вращательного движения."
+    },
+    {
+        question: "Что входит в комплект автомата?",
+        options: [
+            "Принадлежность, ремень, сумка для магазинов",
+            "Только магазин и ремень",
+            "Только принадлежность и сумка",
+            "Только ремень и штык-нож"
+        ],
+        correct: 0,
+        explanation: "В комплект автомата входят: принадлежность, ремень и сумка для магазинов. Штык-нож входит в комплект, но в тексте он указан отдельно как элемент, присоединяемый к автомату."
+    },
+    {
+        question: "Какие принадлежности входят в комплект автомата?",
+        options: [
+            "Шомпол, пенал, протирка, ёршик, отвёртка, выколотка, шпилька, маслёнка, переходник и 2 обоймы",
+            "Только шомпол и пенал",
+            "Только протирка и ёршик",
+            "Только маслёнка и отвёртка"
+        ],
+        correct: 0,
+        explanation: "Согласно тексту, к принадлежностям автомата относятся: шомпол, пенал, протирка, ёршик, отвёртка, выколотка, шпилька, маслёнка, переходник и 2 обоймы."
+    },
+    {
+        question: "Для чего служит ствол?",
+        options: [
+            "Для направления полета пули",
+            "Для хранения патронов",
+            "Для прицеливания",
+            "Для защиты частей автомата от загрязнения"
+        ],
+        correct: 0,
+        explanation: "Ствол служит для направления полёта пули. Внутри он имеет канал с четырьмя нарезами, придающими пуле вращательное движение."
+    },
+    {
+        question: "Для чего служат нарезы в стволе?",
+        options: [
+            "Для придания пуле вращательного движения",
+            "Для увеличения дальности полёта пули",
+            "Для уменьшения отдачи при выстреле",
+            "Для уменьшения массы ствола"
+        ],
+        correct: 0,
+        explanation: "Нарезы служат для придания пуле вращательного движения, что обеспечивает её устойчивость в полёте и повышает кучность стрельбы."
+    },
+    {
+        question: "Для чего служит дульный тормоз-компенсатор?",
+        options: [
+            "Для повышения кучности боя при стрельбе очередями из неустойчивых положений",
+            "Для увеличения дальности полёта пули",
+            "Для уменьшения звука выстрела",
+            "Для защиты ствола от загрязнения"
+        ],
+        correct: 0,
+        explanation: "Дульный тормоз-компенсатор служит для повышения кучности боя при стрельбе очередями из неустойчивых положений (на ходу, стоя, с колена)."
+    },
+    {
+        question: "Для чего служит ствольная коробка?",
+        options: [
+            "Для соединения частей и механизмов автомата",
+            "Для хранения патронов",
+            "Для прицеливания",
+            "Для защиты от загрязнения"
+        ],
+        correct: 0,
+        explanation: "Ствольная коробка служит для соединения частей и механизмов автомата, для обеспечения закрывания канала ствола затвором и запирания затвора."
+    },
+    {
+        question: "Из чего состоит прицельное приспособление?",
+        options: [
+            "Из прицела и мушки",
+            "Только из прицела",
+            "Только из мушки",
+            "Из оптического прицела и дальномера"
+        ],
+        correct: 0,
+        explanation: "Прицельное приспособление состоит из прицела и мушки. Оно служит для наводки автомата при стрельбе по целям на различные расстояния."
+    },
+    {
+        question: "Для чего служит затвор?",
+        options: [
+            "Для досылания патрона, закрывания канала ствола, разбивания капсюля и извлечения гильзы",
+            "Только для досылания патрона в патронник",
+            "Только для разбивания капсюля",
+            "Для прицеливания и наводки оружия"
+        ],
+        correct: 0,
+        explanation: "Затвор выполняет четыре функции: досылание патрона в патронник, закрывание канала ствола, разбивание капсюля и извлечение из патронника гильзы (патрона)."
+    },
+    {
+        question: "Для чего служит возвратный механизм?",
+        options: [
+            "Для возвращения затворной рамы с затвором в переднее положение",
+            "Для запирания канала ствола",
+            "Для досылания патрона в патронник",
+            "Для спуска курка с боевого взвода"
+        ],
+        correct: 0,
+        explanation: "Возвратный механизм служит для возвращения затворной рамы с затвором в переднее положение. Он состоит из возвратной пружины, направляющего стержня, подвижного стержня и муфты."
+    },
+    {
+        question: "Из чего состоит возвратный механизм?",
+        options: [
+            "Из возвратной пружины, направляющего стержня, подвижного стержня и муфты",
+            "Только из возвратной пружины",
+            "Только из направляющего стержня",
+            "Из двух возвратных пружин и муфты"
+        ],
+        correct: 0,
+        explanation: "Возвратный механизм состоит из возвратной пружины, направляющего стержня, подвижного стержня и муфты — все четыре элемента перечислены в тексте."
+    },
+    {
+        question: "Для чего служит газовая трубка?",
+        options: [
+            "Для направления движения газового поршня",
+            "Для отвода пороховых газов из ствола",
+            "Для охлаждения ствола при стрельбе",
+            "Для прицеливания"
+        ],
+        correct: 0,
+        explanation: "Газовая трубка служит для направления движения газового поршня. Отвод пороховых газов осуществляется через газоотводное отверстие в стенке ствола."
+    },
+    {
+        question: "Для чего служит ствольная накладка?",
+        options: [
+            "Для предохранения рук от ожогов",
+            "Для украшения автомата",
+            "Для увеличения массы автомата",
+            "Для прицеливания"
+        ],
+        correct: 0,
+        explanation: "Ствольная накладка служит для предохранения рук автоматчика от ожогов при стрельбе. Аналогичную функцию выполняет и цевьё."
+    },
+    {
+        question: "Для чего служит переводчик?",
+        options: [
+            "Для установки на автоматический или одиночный огонь, или на предохранитель",
+            "Только для включения автоматического огня",
+            "Только для включения одиночного огня",
+            "Только для блокировки спускового крючка"
+        ],
+        correct: 0,
+        explanation: "Переводчик служит для установки автомата на автоматический или одиночный огонь, либо на предохранитель. Он имеет три положения."
+    },
+    {
+        question: "Для чего служит штык-нож?",
+        options: [
+            "Для поражения противника в рукопашном бою",
+            "Только для резки проволоки",
+            "Только для распиловки металла",
+            "Для метания в противника"
+        ],
+        correct: 0,
+        explanation: "Штык-нож присоединяется к автомату перед атакой и служит для поражения противника в рукопашном бою. В остальное время используется как нож, пила и ножницы."
+    },
+    {
+        question: "На чём основан принцип действия АК-74?",
+        options: [
+            "На использовании энергии пороховых газов, отводимых через отверстие в стенке ствола",
+            "На использовании энергии отдачи при выстреле",
+            "На пружинном механизме с ручным приводом",
+            "На электрическом приводе затворной рамы"
+        ],
+        correct: 0,
+        explanation: "Принцип действия АК-74 основан на использовании энергии пороховых газов, отводимых через верхнее отверстие в стенке ствола. Это классическая схема газоотводного автоматического оружия."
+    },
+    {
+        question: "В каком порядке производится сборка автомата?",
+        options: [
+            "В обратной последовательности",
+            "В произвольном порядке",
+            "В той же последовательности, что и разборка",
+            "Начиная с присоединения магазина"
+        ],
+        correct: 0,
+        explanation: "Сборка автомата осуществляется в обратной последовательности относительно разборки. Это стандартное правило для всех образцов стрелкового оружия."
+    },
+    {
+        question: "Сколько времени отводится на неполную разборку автомата на оценку «отлично»?",
+        options: ["15 с", "13 с", "17 с", "19 с"],
+        correct: 0,
+        explanation: "Согласно нормативам, на неполную разборку автомата на оценку «отлично» отводится 15 секунд. «Хорошо» — 17 с, «удовлетворительно» — 19 с."
+    },
+    {
+        question: "Сколько времени отводится на сборку автомата на оценку «хорошо»?",
+        options: ["27 с", "25 с", "29 с", "32 с"],
+        correct: 0,
+        explanation: "На сборку автомата после неполной разборки на оценку «хорошо» отводится 27 секунд. «Отлично» — 25 с, «удовлетворительно» — 32 с."
+    },
+    {
+        question: "Какая команда подается для начала неполной разборки автомата?",
+        options: [
+            "К НЕПОЛНОЙ РАЗБОРКЕ ОРУЖИЯ ПРИСТУПИТЬ",
+            "К РАЗБОРКЕ ОРУЖИЯ ПРИСТУПИТЬ",
+            "НАЧАТЬ РАЗБОРКУ",
+            "ПРИСТУПИТЬ К РАЗБОРКЕ"
+        ],
+        correct: 0,
+        explanation: "Для начала неполной разборки подаётся команда «К НЕПОЛНОЙ РАЗБОРКЕ ОРУЖИЯ ПРИСТУПИТЬ». Время отсчитывается от этой команды до доклада «ГОТОВО»."
+    },
+
+    // --- ВОПРОСЫ С НЕСКОЛЬКИМИ ПРАВИЛЬНЫМИ ОТВЕТАМИ ---
+    {
+        multiple: true,
+        question: "Какие функции выполняет затвор автомата? (выберите все правильные)",
+        options: [
+            "Досылание патрона в патронник",
+            "Закрывание канала ствола",
+            "Разбивание капсюля",
+            "Извлечение из патронника гильзы (патрона)",
+            "Придание пуле вращательного движения"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Затвор выполняет четыре функции: досылание патрона, закрывание канала ствола, разбивание капсюля и извлечение гильзы. Придание пуле вращательного движения — функция нарезов в канале ствола, а не затвора."
+    },
+    {
+        multiple: true,
+        question: "Какие элементы входят в состав возвратного механизма? (выберите все правильные)",
+        options: [
+            "Возвратная пружина",
+            "Направляющий стержень",
+            "Подвижный стержень",
+            "Муфта",
+            "Газовый поршень"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Возвратный механизм состоит из возвратной пружины, направляющего стержня, подвижного стержня и муфты. Газовый поршень относится к затворной раме, а не к возвратному механизму."
+    },
+    {
+        multiple: true,
+        question: "Какие принадлежности входят в комплект автомата? (выберите все правильные)",
+        options: [
+            "Шомпол",
+            "Пенал",
+            "Протирка",
+            "Ёршик",
+            "Отвёртка",
+            "Оптический прицел"
+        ],
+        correct: [0, 1, 2, 3, 4],
+        explanation: "К принадлежностям автомата относятся шомпол, пенал, протирка, ёршик, отвёртка, выколотка, шпилька, маслёнка, переходник и 2 обоймы. Оптический прицел в комплект АК-74 не входит."
+    },
+    {
+        multiple: true,
+        question: "Для чего предназначен автомат Калашникова АК-74? (выберите все правильные)",
+        options: [
+            "Для уничтожения живой силы противника",
+            "Для поражения огневых средств противника",
+            "Для поражения противника в рукопашном бою (со штык-ножом)",
+            "Для поражения бронированных целей",
+            "Для ведения снайперского огня на 1500 м"
+        ],
+        correct: [0, 1, 2],
+        explanation: "АК-74 предназначен для уничтожения живой силы и поражения огневых средств противника. Для рукопашного боя к нему присоединяется штык-нож. Поражение бронированных целей и снайперский огонь на 1500 м — задачи других средств."
+    },
+    {
+        multiple: true,
+        question: "Что входит в комплект автомата? (выберите все правильные)",
+        options: [
+            "Принадлежность",
+            "Ремень",
+            "Сумка для магазинов",
+            "Штык-нож",
+            "Оптический прицел"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "В комплект автомата входят принадлежность, ремень, сумка для магазинов и штык-нож. Оптический прицел в стандартный комплект АК-74 не входит."
+    }
+];
+
+// ============================================
+// ЛОГИКА ТЕСТА
+// ============================================
+var currentQuestions = [];
+var selectedAnswers = {};
+var usedQuestionIndices = [];
+
+var QUESTIONS_PER_TEST = 10;
+
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
+function getRandomQuestions() {
+    if (usedQuestionIndices.length + QUESTIONS_PER_TEST > questionBank.length) {
+        usedQuestionIndices = [];
+    }
+
+    var availableIndices = [];
+    for (var i = 0; i < questionBank.length; i++) {
+        if (usedQuestionIndices.indexOf(i) === -1) {
+            availableIndices.push(i);
+        }
+    }
+
+    availableIndices = shuffleArray(availableIndices);
+    var chosenIndices = availableIndices.slice(0, QUESTIONS_PER_TEST);
+
+    for (var k = 0; k < chosenIndices.length; k++) {
+        usedQuestionIndices.push(chosenIndices[k]);
+    }
+
+    var result = [];
+    for (var m = 0; m < chosenIndices.length; m++) {
+        result.push(prepareQuestion(questionBank[chosenIndices[m]]));
+    }
+    return result;
+}
+
+function prepareQuestion(q) {
+    var isMulti = !!q.multiple;
+    var indices = [];
+    for (var i = 0; i < q.options.length; i++) indices.push(i);
+    var shuffledIndices = shuffleArray(indices);
+
+    var newOptions = [];
+    for (var j = 0; j < shuffledIndices.length; j++) {
+        newOptions.push(q.options[shuffledIndices[j]]);
+    }
+
+    var newCorrect;
+    if (isMulti) {
+        newCorrect = [];
+        for (var c = 0; c < q.correct.length; c++) {
+            newCorrect.push(shuffledIndices.indexOf(q.correct[c]));
+        }
+        newCorrect.sort(function(a, b) { return a - b; });
+    } else {
+        newCorrect = shuffledIndices.indexOf(q.correct);
+    }
+
+    return {
+        question: q.question,
+        options: newOptions,
+        correct: newCorrect,
+        multiple: isMulti,
+        explanation: q.explanation || ''
+    };
+}
+
+function renderTest() {
+    currentQuestions = getRandomQuestions();
+    selectedAnswers = {};
+    var container = document.getElementById('testContainer');
+    var html = '';
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var cls = q.multiple ? 'question-block multi' : 'question-block';
+        html += '<div class="' + cls + '" id="q' + i + '">';
+        html += '<p>' + (i + 1) + '. ' + q.question + '</p>';
+        if (q.multiple) {
+            html += '<div class="hint">Выберите все правильные варианты</div>';
+        }
+        for (var j = 0; j < q.options.length; j++) {
+            html += '<label id="q' + i + '_opt' + j + '">';
+            var inputType = q.multiple ? 'checkbox' : 'radio';
+            html += '<input type="' + inputType + '" name="q' + i + '" value="' + j + '"> ';
+            html += q.options[j];
+            html += '</label>';
+        }
+        html += '<div class="feedback" id="fb' + i + '" style="display:none;"></div>';
+        html += '<div class="correct-list" id="cl' + i + '" style="display:none;"></div>';
+        html += '<div class="explanation" id="ex' + i + '" style="display:none;"></div>';
+        html += '</div>';
+    }
+    container.innerHTML = html;
+    document.getElementById('resultBox').style.display = 'none';
+    document.getElementById('resultBox').innerHTML = '';
+
+    container.onchange = function(e) {
+        var target = e.target;
+        if (target.tagName !== 'INPUT') return;
+        var name = target.name;
+        var qIndex = parseInt(name.substring(1), 10);
+        var q = currentQuestions[qIndex];
+        if (!q) return;
+
+        if (q.multiple) {
+            var checked = [];
+            var boxes = container.querySelectorAll('input[name="' + name + '"]:checked');
+            for (var b = 0; b < boxes.length; b++) {
+                checked.push(parseInt(boxes[b].value, 10));
+            }
+            checked.sort(function(a, b) { return a - b; });
+            selectedAnswers[name] = checked;
+        } else {
+            selectedAnswers[name] = parseInt(target.value, 10);
+        }
+    };
+}
+
+function arraysEqual(a, b) {
+    if (!a || !b) return false;
+    if (a.length !== b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+function checkTest() {
+    var correct = 0;
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var selected = selectedAnswers['q' + i];
+        var qBlock = document.getElementById('q' + i);
+        var fb = document.getElementById('fb' + i);
+        var cl = document.getElementById('cl' + i);
+        var ex = document.getElementById('ex' + i);
+        var isCorrect = false;
+
+        for (var opt = 0; opt < q.options.length; opt++) {
+            var lbl = document.getElementById('q' + i + '_opt' + opt);
+            if (lbl) {
+                lbl.classList.remove('answer-correct', 'answer-wrong-selected', 'answer-correct-not-selected');
+            }
+        }
+
+        if (q.multiple) {
+            var correctArr = q.correct;
+            var selectedArr = (selected !== undefined) ? selected : [];
+
+            for (var m = 0; m < q.options.length; m++) {
+                var lblM = document.getElementById('q' + i + '_opt' + m);
+                if (!lblM) continue;
+                var isCorr = correctArr.indexOf(m) !== -1;
+                var isSel = selectedArr.indexOf(m) !== -1;
+                if (isCorr && isSel) {
+                    lblM.classList.add('answer-correct');
+                } else if (!isCorr && isSel) {
+                    lblM.classList.add('answer-wrong-selected');
+                } else if (isCorr && !isSel) {
+                    lblM.classList.add('answer-correct-not-selected');
+                }
+            }
+
+            if (selectedArr.length > 0 && arraysEqual(selectedArr, correctArr)) {
+                isCorrect = true;
+            }
+        } else {
+            var correctIdx = q.correct;
+            for (var n = 0; n < q.options.length; n++) {
+                var lblN = document.getElementById('q' + i + '_opt' + n);
+                if (!lblN) continue;
+                var isCorrN = (n === correctIdx);
+                var isSelN = (selected === n);
+                if (isCorrN) {
+                    lblN.classList.add('answer-correct');
+                } else if (isSelN) {
+                    lblN.classList.add('answer-wrong-selected');
+                }
+            }
+            if (selected !== undefined && selected === correctIdx) {
+                isCorrect = true;
+            }
+        }
+
+        if (isCorrect) {
+            correct++;
+            qBlock.style.borderLeftColor = '#1f7a1f';
+            fb.className = 'feedback ok';
+            fb.style.display = 'block';
+            fb.textContent = '✔ Верно';
+            cl.style.display = 'none';
+        } else {
+            qBlock.style.borderLeftColor = '#8b0000';
+            fb.className = 'feedback fail';
+            fb.style.display = 'block';
+            fb.textContent = '✘ Неверно';
+
+            var listHtml = '<strong>Правильные варианты:</strong><ul>';
+            if (q.multiple) {
+                for (var c = 0; c < q.correct.length; c++) {
+                    listHtml += '<li>' + q.options[q.correct[c]] + '</li>';
+                }
+            } else {
+                listHtml += '<li>' + q.options[q.correct] + '</li>';
+            }
+            listHtml += '</ul>';
+            cl.innerHTML = listHtml;
+            cl.style.display = 'block';
+        }
+
+        // Пояснение правильного ответа показывается ВСЕГДА
+        if (q.explanation) {
+            ex.innerHTML = '<strong>Пояснение:</strong> ' + q.explanation;
+            ex.style.display = 'block';
+        } else {
+            ex.style.display = 'none';
+        }
+    }
+
+    var grade, gradeText, gradeClass;
+    if (correct === 10) { grade = 5; gradeText = 'Отлично!'; gradeClass = 'grade-5'; }
+    else if (correct === 9) { grade = 4; gradeText = 'Хорошо!'; gradeClass = 'grade-4'; }
+    else if (correct === 8) { grade = 3; gradeText = 'Удовлетворительно'; gradeClass = 'grade-3'; }
+    else { grade = 2; gradeText = 'Неудовлетворительно. Требуется повторное изучение!'; gradeClass = 'grade-2'; }
+
+    var resultBox = document.getElementById('resultBox');
+    resultBox.style.display = 'block';
+    resultBox.className = 'result-box';
+    resultBox.innerHTML = '<div class="' + gradeClass + '">' +
+        '<p style="font-size: 28px;">Ваша оценка: ' + grade + '</p>' +
+        '<p style="font-size: 22px;">' + gradeText + '</p>' +
+        '<p style="font-size: 18px; margin-top: 10px;">Правильных ответов: ' + correct + ' из 10</p>' +
+        '</div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetTest() {
+    renderTest();
+    var section = document.querySelector('.test-section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+window.onload = function() {
+    renderTest();
+};
+</script>
+</body>
+</html>
