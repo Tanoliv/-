@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ручной Противотанковый Гранатомет - Огневая подготовка</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <style>
+        .question-block.multi {
+            border-left-color: #1f5f8b;
+        }
+        .question-block .hint {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin: 4px 0 8px 0;
+        }
+        .question-block label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .question-block label.answer-correct {
+            background: #d6f5d6;
+            border-left: 3px solid #1f7a1f;
+        }
+        .question-block label.answer-wrong-selected {
+            background: #f8d6d6;
+            border-left: 3px solid #8b0000;
+            text-decoration: line-through;
+        }
+        .question-block label.answer-correct-not-selected {
+            background: #fff7d6;
+            border-left: 3px solid #b8860b;
+        }
+        .question-block .feedback {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-indent: 0;
+        }
+        .question-block .feedback.ok {
+            color: #1f7a1f;
+            background: #e6f7e6;
+        }
+        .question-block .feedback.fail {
+            color: #8b0000;
+            background: #f7e6e6;
+        }
+        .question-block .correct-list {
+            font-size: 14px;
+            color: #333;
+            background: #f0f4f8;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .correct-list strong {
+            color: #1f5f8b;
+        }
+        .question-block .correct-list ul {
+            margin: 4px 0 0 20px;
+            padding: 0;
+        }
+        .question-block .correct-list li {
+            margin: 2px 0;
+        }
+        .question-block .explanation {
+            font-size: 14px;
+            color: #333;
+            background: #eef6ee;
+            border-left: 3px solid #1f7a1f;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+            text-indent: 0;
+        }
+        .question-block .explanation strong {
+            color: #1f5f8b;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="top">
+    <!-- ===== ШАПКА С НАВИГАЦИЕЙ ===== -->
+    <div class="header">
+        <div class="header-left">
+            <span class="star">★</span>
+            <h1>Огневая подготовка</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">★ Главная</a>
+            <a href="7.html">◀ Предыдущая</a>
+            <a href="9.html">Следующая ▶</a>
+        </div>
+    </div>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2>Назначение, боевые свойства, материальная часть и применение ручного противотанкового гранатомета РПГ-7.</h2>
+
+            <!--Видио Принцип действия гранатомета РПГ-7 -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;">Принцип действия гранатомета РПГ-7</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 25.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="Принцип действия гранатомета РПГ-7.mp4" type="video/mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="Принцип действия гранатомета РПГ-7.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: Принцип действия гранатомета РПГ-7.mp4
+    </p>
+</div>
+        
+        <p><strong>РПГ-7</strong> – советский ручной противотанковый гранатомёт многоразового применения (рис. 25). Предназначен для борьбы с танками, самоходными артиллерийскими установками и другой бронетехникой, может быть использован для уничтожения живой силы в укрытиях, а также для борьбы с низколетящими малоскоростными воздушными целями.</p>
+                    
+        <p>Гранатомет РПГ-7 с выстрелом ПГ-7В (рис. 1) поступил в войска в 1961 году. С тех пор он состоит на вооружении ВС РФ. Такое долголетие обеспечено не только за счет простоты и оригинальности конструкции, но и путем системной модернизации самого гранатомета, а также созданием новых выстрелов к нему.</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 1 ===== -->
+<div class="figure">
+    <img src="Рис. 26.jpg" alt="Граната ПГ-7В к РПГ-7" 
+         onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+    <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+          </div>
+
+        
+        <p>Рис. 1. Граната ПГ-7В к РПГ-7.</p>
+        
+        <p><strong>Основные боевые характеристики РПГ-7 с гранатой ПГ-7В приведены в табл. 5.</strong></p>
+        
+        <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse; margin:15px 0; font-size:15px; border-color:#5a4d3a;">
+            <thead>
+                <tr style="background:#cbc4b2;">
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">№ п/п</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Характеристики РПГ-7 с гранатой ПГ-7В</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1.</td><td style="border:1px solid #5a4d3a; padding:5px;">Калибр, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">40</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">2.</td><td style="border:1px solid #5a4d3a; padding:5px;">Калибр гранаты, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">70, 85, 93, 105</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3.</td><td style="border:1px solid #5a4d3a; padding:5px;">Длина, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">950</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">4.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса с оптическим прицелом, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">6,3</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5.</td><td style="border:1px solid #5a4d3a; padding:5px;">Масса гранаты ПГ-7В, кг</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1,94</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">6.</td><td style="border:1px solid #5a4d3a; padding:5px;">Начальная скорость полета гранаты, м/с</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">120</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">7.</td><td style="border:1px solid #5a4d3a; padding:5px;">Темп стрельбы, выстр/мин</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">6</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">8.</td><td style="border:1px solid #5a4d3a; padding:5px;">Прицельная дальность стрельбы, м</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">500</td></tr>
+                <tr><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">9.</td><td style="border:1px solid #5a4d3a; padding:5px;">Бронепробиваемость, мм</td><td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">300</td></tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Гранатомет состоит из следующих основных частей и механизмов:</strong></p>
+        <ul>
+            <li>ствола с механическим (открытым) прицелом;</li>
+            <li>ударно-спускового механизма с предохранителем;</li>
+            <li>бойкового механизма;</li>
+            <li>оптического прицела.</li>
+        </ul>
+        
+        <p><strong>Выстрел к гранатомету</strong> состоит из противотанковой гранаты и порохового заряда.</p>
+        
+        <p><strong>Противотанковая граната состоит из следующих основных частей:</strong></p>
+        <ul>
+            <li>головной части со взрывчатым веществом;</li>
+            <li>взрывателя;</li>
+            <li>реактивного двигателя;</li>
+            <li>стабилизатора (размещенного в пороховом заряде).</li>
+        </ul>
+        
+        <p><strong>При выстреле из гранатомета</strong> от удара бойка по капсюлю-воспламенителю гранаты воспламеняется пороховой заряд. Газы, образующиеся от сгорания порохового заряда, придают гранате вращательное движение и выбрасывают ее из канала ствола со скоростью при стрельбе выстрелом ПГ-7В – 120 м/сек, ПГ-7ВМ – 140 м/сек.</p>
+        
+        <p>После вылета гранаты из канала ствола открываются перья стабилизатора, происходит взведение взрывателя и на расстоянии, обеспечивающем безопасность стреляющего, воспламеняется пороховой заряд реактивного двигателя.</p>
+        
+        <p>При горении порохового заряда реактивного двигателя вследствие истечения пороховых газов через сопловые отверстия образуется реактивная сила и скорость полета гранаты увеличивается, достигая в конце полного сгорания заряда 300 м/сек. В дальнейшем граната летит по инерции.</p>
+        
+        <p>При встрече гранаты с преградой (целью) пьезоэлемент взрывателя сжимается, в результате чего вырабатывается электрический ток, под действием которого взрывается электродетонатор взрывателя, а затем разрывной заряд гранаты. При взрыве гранаты образуется кумулятивная (сосредоточенная, направленная) струя, которая пробивает броню (преграду), поражает живую силу, разрушает вооружение и оборудование, а также воспламеняет горючее.</p>
+        
+        <p><strong>При выстреле гранатомет отдачи не имеет.</strong></p>
+        
+        <p>Это обеспечивается истечением пороховых газов назад через сопло и раструб патрубка ствола. Образовавшаяся вследствие этого реактивная сила, направленная вперед, уравновешивает силу отдачи, а действие пороховых газов на переднюю стенку уширения трубы вызывает некоторое движение гранатомета вперед (выкат), которое воспринимается стреляющим малозаметно.</p>
+        
+        <p>РПГ-7 использовался практически во всех вооружённых конфликтах с 1968 года и до сих пор состоит на вооружении вооружённых сил многих стран. Благодаря появлению новых боеприпасов РПГ-7 представляет существенную опасность и для современного вооружения и военной техники, поэтому остаётся востребованным и в XXI веке.</p>
+
+          <!--Видио Принцип действия гранатомета РПГ-7 -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;"></h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 25.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="Как работает Советский противотанковый гранатомет РПГ-7.Подробная 3D-симуляция_364p.mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="Как работает Советский противотанковый гранатомет РПГ-7.Подробная 3D-симуляция_364p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: Как работает Советский противотанковый гранатомет РПГ-7.Подробная 3D-симуляция_364p.mp4
+    </p>
+</div>
+
+        <!-- ===== ТЕСТ ===== -->
+        <div class="test-section">
+            <h3>📝 Контрольный тест по разделу</h3>
+            <div id="testContainer"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="test-btn" onclick="checkTest()">Проверить ответы</button>
+                <button class="test-btn" onclick="resetTest()">🔄 Начать заново</button>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <!-- ===== НИЖНЯЯ НАВИГАЦИЯ ===== -->
+    <div class="nav-bottom">
+        <a href="../index.html" class="nav-btn">★ Главная</a>
+        <a href="7.html" class="nav-btn">◀ Предыдущая</a>
+        <a href="9.html" class="nav-btn">Следующая ▶</a>
+        <a href="#top" class="nav-btn">▲ Вверх</a>
+    </div>
+
+    <div class="footer-note">
+        Москва 2026 г.
+    </div>
+</div>
+
+<script>
+// ============================================
+// БАЗА ВОПРОСОВ
+// multiple: true — вопрос с несколькими правильными ответами
+// correct для multiple — массив индексов правильных вариантов
+// explanation — пояснение правильного ответа
+// ============================================
+var questionBank = [
+    // --- ВОПРОСЫ С ОДНИМ ПРАВИЛЬНЫМ ОТВЕТОМ ---
+    {
+        question: "Что такое РПГ-7?",
+        options: [
+            "Советский ручной противотанковый гранатомёт многоразового применения",
+            "Автоматический станковый гранатомёт",
+            "Одноразовый противотанковый гранатомёт",
+            "Ручной противопехотный гранатомёт"
+        ],
+        correct: 0,
+        explanation: "РПГ-7 — советский ручной противотанковый гранатомёт многоразового применения. В отличие от одноразовых гранатомётов, он допускает многократное использование и перезаряжание."
+    },
+    {
+        question: "Для чего предназначен РПГ-7?",
+        options: [
+            "Для борьбы с танками, САУ и другой бронетехникой",
+            "Только для борьбы с живой силой противника",
+            "Только для борьбы с воздушными целями",
+            "Только для разрушения фортификационных сооружений"
+        ],
+        correct: 0,
+        explanation: "РПГ-7 предназначен прежде всего для борьбы с танками, самоходными артиллерийскими установками и другой бронетехникой. Поражение живой силы и воздушных целей — дополнительные возможности."
+    },
+    {
+        question: "Для чего может быть дополнительно использован РПГ-7?",
+        options: [
+            "Для уничтожения живой силы в укрытиях и борьбы с низколетящими воздушными целями",
+            "Только для борьбы с танками",
+            "Только для разрушения зданий",
+            "Только для метания дымовых гранат"
+        ],
+        correct: 0,
+        explanation: "Кроме основной задачи, РПГ-7 может быть использован для уничтожения живой силы в укрытиях, а также для борьбы с низколетящими малоскоростными воздушными целями."
+    },
+    {
+        question: "В каком году поступил в войска гранатомет РПГ-7 с выстрелом ПГ-7В?",
+        options: ["1961", "1958", "1965", "1970"],
+        correct: 0,
+        explanation: "Гранатомёт РПГ-7 с выстрелом ПГ-7В поступил в войска в 1961 году и с тех пор состоит на вооружении ВС РФ."
+    },
+    {
+        question: "Какой калибр РПГ-7?",
+        options: ["40 мм", "30 мм", "50 мм", "60 мм"],
+        correct: 0,
+        explanation: "Калибр РПГ-7 — 40 мм. Калибр самой гранаты может быть больше (70, 85, 93, 105 мм), так как она надевается на ствол снаружи."
+    },
+    {
+        question: "Какова длина РПГ-7?",
+        options: ["950 мм", "850 мм", "900 мм", "1000 мм"],
+        correct: 0,
+        explanation: "Длина РПГ-7 — 950 мм. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова масса РПГ-7 с оптическим прицелом?",
+        options: ["6,3 кг", "5,3 кг", "7,3 кг", "8,3 кг"],
+        correct: 0,
+        explanation: "Масса РПГ-7 с оптическим прицелом — 6,3 кг. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова масса гранаты ПГ-7В?",
+        options: ["1,94 кг", "1,54 кг", "1,74 кг", "2,14 кг"],
+        correct: 0,
+        explanation: "Масса гранаты ПГ-7В — 1,94 кг. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова начальная скорость полета гранаты ПГ-7В?",
+        options: ["120 м/с", "100 м/с", "140 м/с", "160 м/с"],
+        correct: 0,
+        explanation: "Начальная скорость полёта гранаты ПГ-7В при вылете из ствола — 120 м/с. Для ПГ-7ВМ она составляет 140 м/с."
+    },
+    {
+        question: "Какова начальная скорость полета гранаты ПГ-7ВМ?",
+        options: ["140 м/с", "120 м/с", "130 м/с", "150 м/с"],
+        correct: 0,
+        explanation: "Начальная скорость полёта гранаты ПГ-7ВМ при вылете из ствола — 140 м/с, что больше, чем у ПГ-7В (120 м/с)."
+    },
+    {
+        question: "Какой темп стрельбы у РПГ-7?",
+        options: ["6 выстр/мин", "4 выстр/мин", "8 выстр/мин", "10 выстр/мин"],
+        correct: 0,
+        explanation: "Темп стрельбы РПГ-7 — 6 выстрелов в минуту. Это обусловлено необходимостью перезаряжания гранатомёта вручную."
+    },
+    {
+        question: "Какова прицельная дальность стрельбы РПГ-7?",
+        options: ["500 м", "300 м", "400 м", "600 м"],
+        correct: 0,
+        explanation: "Прицельная дальность стрельбы РПГ-7 — 500 м. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Какова бронепробиваемость РПГ-7?",
+        options: ["300 мм", "200 мм", "250 мм", "350 мм"],
+        correct: 0,
+        explanation: "Бронепробиваемость РПГ-7 с гранатой ПГ-7В — 300 мм. Это значение приведено в таблице характеристик."
+    },
+    {
+        question: "Что происходит при выстреле из гранатомета?",
+        options: [
+            "От удара бойка по капсюлю-воспламенителю воспламеняется пороховой заряд",
+            "Происходит механический запуск гранаты пружиной",
+            "Происходит электрический запуск от аккумулятора",
+            "Происходит ручной запуск гранаты"
+        ],
+        correct: 0,
+        explanation: "При выстреле от удара бойка по капсюлю-воспламенителю гранаты воспламеняется пороховой заряд. Газы придают гранате вращательное движение и выбрасывают её из ствола."
+    },
+    {
+        question: "Что происходит после вылета гранаты из канала ствола?",
+        options: [
+            "Открываются перья стабилизатора, взводится взрыватель, воспламеняется заряд реактивного двигателя",
+            "Граната сразу взрывается при встрече с воздухом",
+            "Граната падает на землю из-за отсутствия тяги",
+            "Происходит отделение головной части"
+        ],
+        correct: 0,
+        explanation: "После вылета гранаты из канала ствола открываются перья стабилизатора, происходит взведение взрывателя и на безопасном расстоянии воспламеняется пороховой заряд реактивного двигателя."
+    },
+    {
+        question: "Какая скорость полета гранаты достигается в конце полного сгорания заряда реактивного двигателя?",
+        options: ["300 м/сек", "200 м/сек", "250 м/сек", "350 м/сек"],
+        correct: 0,
+        explanation: "При горении заряда реактивного двигателя скорость гранаты увеличивается и в конце полного сгорания достигает 300 м/сек. Далее граната летит по инерции."
+    },
+    {
+        question: "Что происходит при встрече гранаты с преградой?",
+        options: [
+            "Сжимается пьезоэлемент, вырабатывается ток, взрывается электродетонатор, затем разрывной заряд",
+            "Граната отскакивает от преграды",
+            "Граната разрушается без взрыва",
+            "Срабатывает механический ударник"
+        ],
+        correct: 0,
+        explanation: "При встрече гранаты с преградой пьезоэлемент взрывателя сжимается, вырабатывается электрический ток, под действием которого взрывается электродетонатор, а затем разрывной заряд гранаты."
+    },
+    {
+        question: "Что образуется при взрыве гранаты?",
+        options: [
+            "Кумулятивная струя, которая пробивает броню",
+            "Осколочное поле без пробития брони",
+            "Только ударная волна",
+            "Только звук и дым"
+        ],
+        correct: 0,
+        explanation: "При взрыве гранаты образуется кумулятивная (сосредоточенная, направленная) струя, которая пробивает броню, поражает живую силу, разрушает вооружение и воспламеняет горючее."
+    },
+    {
+        question: "Имеет ли гранатомет отдачу при выстреле?",
+        options: [
+            "Отдачи не имеет",
+            "Имеет небольшую отдачу",
+            "Имеет сильную отдачу, как у винтовки",
+            "Отдача зависит от типа гранаты"
+        ],
+        correct: 0,
+        explanation: "При выстреле гранатомёт отдачи не имеет. Это обеспечивается истечением пороховых газов назад через сопло и раструб патрубка ствола."
+    },
+    {
+        question: "Чем обеспечивается отсутствие отдачи у гранатомета?",
+        options: [
+            "Истечением пороховых газов назад через сопло и раструб патрубка ствола",
+            "Специальным амортизатором на прикладе",
+            "Пружинным механизмом в УСМ",
+            "Тормозом-компенсатором на дульной части"
+        ],
+        correct: 0,
+        explanation: "Отсутствие отдачи обеспечивается истечением пороховых газов назад через сопло и раструб патрубка ствола. Возникающая реактивная сила уравновешивает силу отдачи."
+    },
+    {
+        question: "Что уравновешивает силу отдачи при выстреле из гранатомета?",
+        options: [
+            "Реактивная сила, направленная вперед",
+            "Сила тяжести гранатомёта",
+            "Сила трения гранаты о ствол",
+            "Сила давления воздуха на гранату"
+        ],
+        correct: 0,
+        explanation: "Реактивная сила, направленная вперёд, уравновешивает силу отдачи. Это классический принцип динамореактивного (безоткатного) оружия."
+    },
+    {
+        question: "Что такое выкат гранатомета?",
+        options: [
+            "Небольшое движение гранатомета вперед при выстреле",
+            "Движение гранатомета назад (отдача)",
+            "Движение гранатомета в сторону",
+            "Движение гранатомета вверх"
+        ],
+        correct: 0,
+        explanation: "Выкат — это некоторое движение гранатомёта вперёд, вызванное действием пороховых газов на переднюю стенку уширения трубы. Оно воспринимается стреляющим малозаметно."
+    },
+    {
+        question: "С какого года РПГ-7 используется в вооруженных конфликтах?",
+        options: ["1968", "1965", "1970", "1975"],
+        correct: 0,
+        explanation: "РПГ-7 использовался практически во всех вооружённых конфликтах с 1968 года и до сих пор состоит на вооружении многих стран."
+    },
+    {
+        question: "Почему РПГ-7 остается востребованным в XXI веке?",
+        options: [
+            "Благодаря появлению новых боеприпасов",
+            "Из-за низкой стоимости производства",
+            "Из-за простоты конструкции и малого веса",
+            "Из-за возможности ведения автоматического огня"
+        ],
+        correct: 0,
+        explanation: "Благодаря появлению новых боеприпасов РПГ-7 представляет существенную опасность и для современного вооружения и военной техники, поэтому остаётся востребованным и в XXI веке."
+    },
+    {
+        question: "Для чего нужен стабилизатор в гранате?",
+        options: [
+            "Для стабилизации полета гранаты",
+            "Для увеличения начальной скорости",
+            "Для увеличения дальности полёта",
+            "Для уменьшения массы гранаты"
+        ],
+        correct: 0,
+        explanation: "Стабилизатор (перья) служит для стабилизации полёта гранаты. Он размещён в пороховом заряде и раскрывается после вылета гранаты из канала ствола."
+    },
+    {
+        question: "Что такое кумулятивная струя?",
+        options: [
+            "Сосредоточенная, направленная струя, пробивающая броню",
+            "Обычная струя газа из сопла",
+            "Воздушная струя, отбрасывающая гранату",
+            "Струя пороховых газов из ствола"
+        ],
+        correct: 0,
+        explanation: "Кумулятивная струя — сосредоточенная (направленная) струя, образующаяся при взрыве гранаты. Она пробивает броню, поражает живую силу, разрушает вооружение и воспламеняет горючее."
+    },
+    {
+        question: "Какое движение при выстреле воспринимается стреляющим малозаметно?",
+        options: [
+            "Выкат (движение гранатомета вперед)",
+            "Отдача (движение гранатомета назад)",
+            "Боковое смещение гранатомёта",
+            "Подбрасывание гранатомёта вверх"
+        ],
+        correct: 0,
+        explanation: "Выкат — движение гранатомёта вперёд — воспринимается стреляющим малозаметно. Отдача же у РПГ-7 вообще отсутствует."
+    },
+    {
+        question: "Какое устройство имеет ствол РПГ-7?",
+        options: [
+            "С механическим (открытым) прицелом",
+            "Только с оптическим прицелом",
+            "С коллиматорным прицелом",
+            "Без прицельных приспособлений"
+        ],
+        correct: 0,
+        explanation: "Ствол РПГ-7 имеет механический (открытый) прицел. Кроме того, на гранатомёт устанавливается оптический прицел."
+    },
+
+    // --- ВОПРОСЫ С НЕСКОЛЬКИМИ ПРАВИЛЬНЫМИ ОТВЕТАМИ ---
+    {
+        multiple: true,
+        question: "Из каких основных частей и механизмов состоит гранатомет РПГ-7? (выберите все правильные)",
+        options: [
+            "Ствол с механическим (открытым) прицелом",
+            "Ударно-спусковой механизм с предохранителем",
+            "Бойковый механизм",
+            "Оптический прицел",
+            "Сошка для упора при стрельбе"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Гранатомёт РПГ-7 состоит из ствола с механическим прицелом, ударно-спускового механизма с предохранителем, бойкового механизма и оптического прицела. Сошка для упора — принадлежность пулемёта РПК-74, а не гранатомёта."
+    },
+    {
+        multiple: true,
+        question: "Из каких основных частей состоит противотанковая граната? (выберите все правильные)",
+        options: [
+            "Головная часть со взрывчатым веществом",
+            "Взрыватель",
+            "Реактивный двигатель",
+            "Стабилизатор, размещённый в пороховом заряде",
+            "Ударно-спусковой механизм"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Противотанковая граната состоит из головной части со взрывчатым веществом, взрывателя, реактивного двигателя и стабилизатора, размещённого в пороховом заряде. УСМ — часть самого гранатомёта, а не гранаты."
+    },
+    {
+        multiple: true,
+        question: "Какие задачи может решать РПГ-7? (выберите все правильные)",
+        options: [
+            "Борьба с танками и другой бронетехникой",
+            "Борьба с самоходными артиллерийскими установками",
+            "Уничтожение живой силы в укрытиях",
+            "Борьба с низколетящими малоскоростными воздушными целями",
+            "Ведение автоматического огня по площадям"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "РПГ-7 предназначен для борьбы с танками, САУ и другой бронетехникой, может быть использован для уничтожения живой силы в укрытиях и для борьбы с низколетящими малоскоростными воздушными целями. Автоматический огонь гранатомёт не ведёт."
+    },
+    {
+        multiple: true,
+        question: "Какие утверждения о выстреле из РПГ-7 верны? (выберите все правильные)",
+        options: [
+            "От удара бойка по капсюлю-воспламенителю воспламеняется пороховой заряд",
+            "Газы придают гранате вращательное движение и выбрасывают её из ствола",
+            "После вылета открываются перья стабилизатора и взводится взрыватель",
+            "Заряд реактивного двигателя воспламеняется на безопасном расстоянии от стреляющего",
+            "Граната взрывается сразу после вылета из ствола"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "Все перечисленные этапы (воспламенение заряда, придание вращения, вылет, раскрытие стабилизатора, взведение взрывателя, запуск реактивного двигателя) происходят в указанной последовательности. Граната не взрывается сразу после вылета — взрыв происходит только при встрече с преградой."
+    },
+    {
+        multiple: true,
+        question: "Какие особенности характерны для выстрела из РПГ-7? (выберите все правильные)",
+        options: [
+            "Гранатомёт не имеет отдачи",
+            "Отсутствие отдачи обеспечивается истечением пороховых газов назад через сопло и раструб патрубка ствола",
+            "Реактивная сила, направленная вперёд, уравновешивает силу отдачи",
+            "Действие пороховых газов вызывает выкат — небольшое движение гранатомёта вперёд",
+            "Отдача компенсируется специальным амортизатором на прикладе"
+        ],
+        correct: [0, 1, 2, 3],
+        explanation: "РПГ-7 не имеет отдачи за счёт истечения пороховых газов назад; реактивная сила уравновешивает отдачу, а действие газов на переднюю стенку уширения трубы вызывает выкат. Амортизатор на прикладе не используется — это признак классического оружия с отдачей."
+    }
+];
+
+// ============================================
+// ЛОГИКА ТЕСТА
+// ============================================
+var currentQuestions = [];
+var selectedAnswers = {};
+var usedQuestionIndices = [];
+
+var QUESTIONS_PER_TEST = 10;
+
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+}
+
+function getRandomQuestions() {
+    if (usedQuestionIndices.length + QUESTIONS_PER_TEST > questionBank.length) {
+        usedQuestionIndices = [];
+    }
+
+    var availableIndices = [];
+    for (var i = 0; i < questionBank.length; i++) {
+        if (usedQuestionIndices.indexOf(i) === -1) {
+            availableIndices.push(i);
+        }
+    }
+
+    availableIndices = shuffleArray(availableIndices);
+    var chosenIndices = availableIndices.slice(0, QUESTIONS_PER_TEST);
+
+    for (var k = 0; k < chosenIndices.length; k++) {
+        usedQuestionIndices.push(chosenIndices[k]);
+    }
+
+    var result = [];
+    for (var m = 0; m < chosenIndices.length; m++) {
+        result.push(prepareQuestion(questionBank[chosenIndices[m]]));
+    }
+    return result;
+}
+
+function prepareQuestion(q) {
+    var isMulti = !!q.multiple;
+    var indices = [];
+    for (var i = 0; i < q.options.length; i++) indices.push(i);
+    var shuffledIndices = shuffleArray(indices);
+
+    var newOptions = [];
+    for (var j = 0; j < shuffledIndices.length; j++) {
+        newOptions.push(q.options[shuffledIndices[j]]);
+    }
+
+    var newCorrect;
+    if (isMulti) {
+        newCorrect = [];
+        for (var c = 0; c < q.correct.length; c++) {
+            newCorrect.push(shuffledIndices.indexOf(q.correct[c]));
+        }
+        newCorrect.sort(function(a, b) { return a - b; });
+    } else {
+        newCorrect = shuffledIndices.indexOf(q.correct);
+    }
+
+    return {
+        question: q.question,
+        options: newOptions,
+        correct: newCorrect,
+        multiple: isMulti,
+        explanation: q.explanation || ''
+    };
+}
+
+function renderTest() {
+    currentQuestions = getRandomQuestions();
+    selectedAnswers = {};
+    var container = document.getElementById('testContainer');
+    var html = '';
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var cls = q.multiple ? 'question-block multi' : 'question-block';
+        html += '<div class="' + cls + '" id="q' + i + '">';
+        html += '<p>' + (i + 1) + '. ' + q.question + '</p>';
+        if (q.multiple) {
+            html += '<div class="hint">Выберите все правильные варианты</div>';
+        }
+        for (var j = 0; j < q.options.length; j++) {
+            html += '<label id="q' + i + '_opt' + j + '">';
+            var inputType = q.multiple ? 'checkbox' : 'radio';
+            html += '<input type="' + inputType + '" name="q' + i + '" value="' + j + '"> ';
+            html += q.options[j];
+            html += '</label>';
+        }
+        html += '<div class="feedback" id="fb' + i + '" style="display:none;"></div>';
+        html += '<div class="correct-list" id="cl' + i + '" style="display:none;"></div>';
+        html += '<div class="explanation" id="ex' + i + '" style="display:none;"></div>';
+        html += '</div>';
+    }
+    container.innerHTML = html;
+    document.getElementById('resultBox').style.display = 'none';
+    document.getElementById('resultBox').innerHTML = '';
+
+    container.onchange = function(e) {
+        var target = e.target;
+        if (target.tagName !== 'INPUT') return;
+        var name = target.name;
+        var qIndex = parseInt(name.substring(1), 10);
+        var q = currentQuestions[qIndex];
+        if (!q) return;
+
+        if (q.multiple) {
+            var checked = [];
+            var boxes = container.querySelectorAll('input[name="' + name + '"]:checked');
+            for (var b = 0; b < boxes.length; b++) {
+                checked.push(parseInt(boxes[b].value, 10));
+            }
+            checked.sort(function(a, b) { return a - b; });
+            selectedAnswers[name] = checked;
+        } else {
+            selectedAnswers[name] = parseInt(target.value, 10);
+        }
+    };
+}
+
+function arraysEqual(a, b) {
+    if (!a || !b) return false;
+    if (a.length !== b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+function checkTest() {
+    var correct = 0;
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var selected = selectedAnswers['q' + i];
+        var qBlock = document.getElementById('q' + i);
+        var fb = document.getElementById('fb' + i);
+        var cl = document.getElementById('cl' + i);
+        var ex = document.getElementById('ex' + i);
+        var isCorrect = false;
+
+        for (var opt = 0; opt < q.options.length; opt++) {
+            var lbl = document.getElementById('q' + i + '_opt' + opt);
+            if (lbl) {
+                lbl.classList.remove('answer-correct', 'answer-wrong-selected', 'answer-correct-not-selected');
+            }
+        }
+
+        if (q.multiple) {
+            var correctArr = q.correct;
+            var selectedArr = (selected !== undefined) ? selected : [];
+
+            for (var m = 0; m < q.options.length; m++) {
+                var lblM = document.getElementById('q' + i + '_opt' + m);
+                if (!lblM) continue;
+                var isCorr = correctArr.indexOf(m) !== -1;
+                var isSel = selectedArr.indexOf(m) !== -1;
+                if (isCorr && isSel) {
+                    lblM.classList.add('answer-correct');
+                } else if (!isCorr && isSel) {
+                    lblM.classList.add('answer-wrong-selected');
+                } else if (isCorr && !isSel) {
+                    lblM.classList.add('answer-correct-not-selected');
+                }
+            }
+
+            if (selectedArr.length > 0 && arraysEqual(selectedArr, correctArr)) {
+                isCorrect = true;
+            }
+        } else {
+            var correctIdx = q.correct;
+            for (var n = 0; n < q.options.length; n++) {
+                var lblN = document.getElementById('q' + i + '_opt' + n);
+                if (!lblN) continue;
+                var isCorrN = (n === correctIdx);
+                var isSelN = (selected === n);
+                if (isCorrN) {
+                    lblN.classList.add('answer-correct');
+                } else if (isSelN) {
+                    lblN.classList.add('answer-wrong-selected');
+                }
+            }
+            if (selected !== undefined && selected === correctIdx) {
+                isCorrect = true;
+            }
+        }
+
+        if (isCorrect) {
+            correct++;
+            qBlock.style.borderLeftColor = '#1f7a1f';
+            fb.className = 'feedback ok';
+            fb.style.display = 'block';
+            fb.textContent = '✔ Верно';
+            cl.style.display = 'none';
+        } else {
+            qBlock.style.borderLeftColor = '#8b0000';
+            fb.className = 'feedback fail';
+            fb.style.display = 'block';
+            fb.textContent = '✘ Неверно';
+
+            var listHtml = '<strong>Правильные варианты:</strong><ul>';
+            if (q.multiple) {
+                for (var c = 0; c < q.correct.length; c++) {
+                    listHtml += '<li>' + q.options[q.correct[c]] + '</li>';
+                }
+            } else {
+                listHtml += '<li>' + q.options[q.correct] + '</li>';
+            }
+            listHtml += '</ul>';
+            cl.innerHTML = listHtml;
+            cl.style.display = 'block';
+        }
+
+        // Пояснение правильного ответа показывается ВСЕГДА
+        if (q.explanation) {
+            ex.innerHTML = '<strong>Пояснение:</strong> ' + q.explanation;
+            ex.style.display = 'block';
+        } else {
+            ex.style.display = 'none';
+        }
+    }
+
+    var grade, gradeText, gradeClass;
+    if (correct === 10) { grade = 5; gradeText = 'Отлично!'; gradeClass = 'grade-5'; }
+    else if (correct === 9) { grade = 4; gradeText = 'Хорошо!'; gradeClass = 'grade-4'; }
+    else if (correct === 8) { grade = 3; gradeText = 'Удовлетворительно'; gradeClass = 'grade-3'; }
+    else { grade = 2; gradeText = 'Неудовлетворительно. Требуется повторное изучение!'; gradeClass = 'grade-2'; }
+
+    var resultBox = document.getElementById('resultBox');
+    resultBox.style.display = 'block';
+    resultBox.className = 'result-box';
+    resultBox.innerHTML = '<div class="' + gradeClass + '">' +
+        '<p style="font-size: 28px;">Ваша оценка: ' + grade + '</p>' +
+        '<p style="font-size: 22px;">' + gradeText + '</p>' +
+        '<p style="font-size: 18px; margin-top: 10px;">Правильных ответов: ' + correct + ' из 10</p>' +
+        '</div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetTest() {
+    renderTest();
+    var section = document.querySelector('.test-section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+window.onload = function() {
+    renderTest();
+};
+</script>
+</body>
+</html>

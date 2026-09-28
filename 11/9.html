@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ручные гранаты - Огневая подготовка</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <style>
+        /* Дополнительные стили для разбора ответов */
+        .question-block {
+            border-left: 4px solid #b8860b;
+            padding: 10px 15px;
+            margin-bottom: 18px;
+            background: #faf8f2;
+            border-radius: 0 6px 6px 0;
+        }
+        .question-block.correct {
+            border-left-color: #1f7a1f;
+        }
+        .question-block.incorrect {
+            border-left-color: #8b0000;
+        }
+        .option-label {
+            display: block;
+            margin: 6px 0;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .option-label.correct-answer {
+            background: #d4edda;
+            border: 1px solid #1f7a1f;
+        }
+        .option-label.wrong-answer {
+            background: #f8d7da;
+            border: 1px solid #8b0000;
+            text-decoration: line-through;
+        }
+        .option-label.missed-answer {
+            background: #fff3cd;
+            border: 1px solid #b8860b;
+        }
+        .explanation-box {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: #eef4fb;
+            border-left: 4px solid #2c6e9e;
+            border-radius: 0 6px 6px 0;
+            font-size: 14px;
+            color: #1a3a5c;
+        }
+        .explanation-box strong {
+            color: #1a3a5c;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .grade-5 { background: #d4edda; color: #0b3d0b; }
+        .grade-4 { background: #d1ecf1; color: #0b3d3d; }
+        .grade-3 { background: #fff3cd; color: #664d00; }
+        .grade-2 { background: #f8d7da; color: #6b1111; }
+        .test-btn {
+            padding: 10px 24px;
+            margin: 0 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background: #2c6e9e;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .test-btn:hover {
+            background: #1f4f73;
+        }
+        .test-btn:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="top">
+    <!-- ===== ШАПКА С НАВИГАЦИЕЙ ===== -->
+    <div class="header">
+        <div class="header-left">
+            <span class="star">★</span>
+            <h1>Огневая подготовка</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">★ Главная</a>
+            <a href="8.html">◀ Предыдущая</a>
+            <a href="11.html">Следующая ▶</a>
+        </div>
+    </div>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <div class="content">
+        <h2>Назначение, боевые свойства, материальная часть и применение ручных гранат.</h2>
+        
+        <p><strong>Ручные осколочные гранаты</strong> предназначаются для поражения осколками живой силы противника в ближнем бою (при атаке, в окопах, убежищах, населенных пунктах, в лесу, в горах и т.п.).</p>
+        
+        <p>В зависимости от дальности разлета осколков гранаты делятся на наступательные и оборонительные.</p>
+        
+        <p>Ручные гранаты РГД-5 и РГН относятся к наступательным гранатам. Гранаты Ф-1 и РГО – к оборонительным (рис. 1).</p>
+
+        <!-- ===== ИЗОБРАЖЕНИЕ РИС. 1 ===== -->
+        <div class="figure">
+            <img src="Рис. 27.jpg" alt="Ручные осколочные гранаты" 
+                 onerror="this.style.display='none'; document.getElementById('figError').style.display='block';">
+            <div id="figError" style="display:none; color:#8b0000; padding:15px; background:#f0d0d0; border-radius:4px; text-indent:0; text-align:center; font-size:16px;">
+            </div>
+        </div>
+
+        <p>Рис. 1. Ручные осколочные гранаты: а – Ф-1; б – РГД-5; в – РГО; г – РГН.</p>
+        
+        <p><strong>Боевые свойства ручных осколочных гранат РГД-5, Ф-1, РГН, РГО приведены в табл. 6.</strong></p>
+        
+        <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse; margin:15px 0; font-size:14px; border-color:#5a4d3a;">
+            <thead>
+                <tr style="background:#cbc4b2;">
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">№ п/п</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Характеристика</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">РГД-5</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">Ф-1</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">РГН</th>
+                    <th style="border:1px solid #5a4d3a; padding:6px; text-align:center;">РГО</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Тип гранаты</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">осколочная наступательная</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">осколочная оборонительная</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">осколочная наступательная</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">осколочная оборонительная</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">2.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Время горения замедлителя, с</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,2-4,2</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,2-4,2</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,2-4,2</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3,2-4,2</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">3.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Время дальнего взведения, с</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">-</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">-</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1,3-1,8</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">1,3-1,8</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">4.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Тип взрывателя (запала)</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">УЗРГМ дистанц.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">УЗРГМ дистанц.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">УДЗ ударно-дистанц.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">УДЗ ударно-дистанц.</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Радиус разлёта осколков, м</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">до 25</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">до 200</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">до 24</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">до 150</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">6.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Радиус зоны эффективного поражения, м</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">5</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">7</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">8</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">16</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">7.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Взрывчатое вещество</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">тротил</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">тротил</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">гексоген, пластит</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">гексоген, пластит</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">8.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Масса заряженной гранаты, г</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">310</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">600</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">310</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">530</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">9.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Средняя дальность броска, м</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">40-50</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20-40</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">30-45</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20-40</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">10.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Масса ящика с гранатами, кг</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">14</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">13,5</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">11.</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px;">Количество гранат и запалов в ящике, шт</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20</td>
+                    <td style="border:1px solid #5a4d3a; padding:5px; text-align:center;">20</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Современная ручная граната</strong> состоит из металлического корпуса, заряда взрывчатых веществ и взрывателя (запала).</p>
+        
+        <p>Корпус гранаты изготавливается как сплошным, так и рубчатым («рубашка»), для повышения осколочного действия. Кроме того, в некоторых конструкциях гранат между корпусом и взрывчатым веществом закладывается запас мелких готовых поражающих элементов (шариков, кубиков и т. п.).</p>
+        
+        <p>Гранаты могут иметь взрыватель, срабатывающий на разных принципах детонации – динамической (детонация при ударе в цель) либо с задержкой (детонация взрывателем с заданной задержкой).</p>
+        
+        <p><strong>Подрыв с задержкой</strong> осуществляется следующим образом: при выдёргивании предохранительной чеки и отпускании скобы срабатывает взведённый заранее пружинный механизм, и боёк с силой бьёт по капсюлю из чувствительного к ударам вещества.</p>
+        
+        <p>Взрывающийся капсюль воспламеняет порох в тонкой запальной трубке. Порох горит со скоростью примерно 1 см в секунду и не требует кислорода, поэтому граната может взорваться и под водой. Когда огонь в запальной трубке достигает детонатора, тот взрывается и вызывает детонацию взрывчатого вещества, которым снаряжена граната. В зависимости от конструкции запал гранаты включает запальную трубку с капсюлем и детонатором, а также может включать в себя пружинный механизм с бойком, чекой и спусковой скобой.</p>
+        
+        <p><strong>Динамическая детонация</strong> у ручных гранат производится с помощью инерционного груза, соединённого с детонатором. При попадании гранаты в твёрдую цель груз смещается и срабатывает детонатор. Чтобы граната не взорвалась в руке, особый механизм приводит инерционный детонатор в боевое положение через короткое время после отпускания спускового рычага.</p>
+        
+        <p>Ручные гранаты нередко используются в качестве мин. Для этого почти выдергивают чеку, остаётся совсем легкое усилие. Затем граната фиксируется с одной стороны предполагаемого пути врага. К чеке привязывается верёвка или проволока, её конец фиксируется на другой стороне пути. Враг, проходя по пути, задевает проволоку – чека выдёргивается, происходит взрыв. Подобное устройство называется «растяжка».</p>
+        
+        <p>Во всех случаях для надежного поражения целей следует назначить увеличенный расход патронов, применять сосредоточение огня нескольких огневых средств по важной цели, использовать для выполнения задачи более мощное огневое средство. При этом следует обязательно учитывать возможность и целесообразность для конкретных условий увеличенного расхода боеприпасов.</p>
+        
+        <p>Правильно организованное обучение подразделений, систематические тренировки в решении огневых задач на макетах местности и, главное, на реальные расстояния в полевых условиях на полигонах позволяют вырабатывать твердые навыки в оценке важности цели и принимать наиболее целесообразное решение на ее поражение. Необходимое условие для эффективного использования стрелкового оружия – понимание всеми стреляющими и командирами подразделений боевых возможностей своего оружия.</p>
+
+         <!--Видио  Ручные осколочные гранаты -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;"> Ручные осколочные гранаты РГД-5 Ф-1</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 27.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="3.2 Ручные осколочные гранаты_1080p.mp4">
+        
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="3.2 Ручные осколочные гранаты_1080p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: Ручные осколочные гранаты
+    </p>
+</div>
+
+ <!--Видио  Ручные осколочные гранаты -->
+<div class="video-container" style="margin: 25px 0; text-align: center;">
+    <h3 style="margin-bottom: 12px; color: #1f5f8b;"> Ручные осколочные гранаты РГН и РГО</h3>
+    <video 
+        controls 
+        preload="metadata"
+        width="100%"
+        playsinline
+        poster="Рис. 27.jpg"
+        style="max-width: 800px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: #000; display: block; margin: 0 auto;"
+    >
+        <!-- Видеофайл лежит в той же папке, что и этот HTML-файл -->
+        <source src="РГН и РГО _ Что это такое_ _ ТТХ_720p.mp4">
+
+        <!-- Текст для старых браузеров -->
+        Ваш браузер не поддерживает встроенное видео. 
+        <a href="РГН и РГО _ Что это такое_ _ ТТХ_720p.mp4">Скачайте видео</a> и посмотрите его отдельно.
+    </video>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 8px; text-indent: 0;">
+        Видеофрагмент: Ручные осколочные гранаты
+    </p>
+
+        <!-- ===== ТЕСТ ===== -->
+        <div class="test-section">
+            <h3>📝 Контрольный тест по разделу</h3>
+            <div id="testContainer"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="test-btn" onclick="checkTest()">Проверить ответы</button>
+                <button class="test-btn" onclick="resetTest()">🔄 Начать заново</button>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <!-- ===== НИЖНЯЯ НАВИГАЦИЯ ===== -->
+    <div class="nav-bottom">
+        <a href="../index.html" class="nav-btn">★ Главная</a>
+        <a href="8.html" class="nav-btn">◀ Предыдущая</a>
+        <a href="10.html" class="nav-btn">Следующая ▶</a>
+        <a href="#top" class="nav-btn">▲ Вверх</a>
+    </div>
+
+    <div class="footer-note">
+        Москва 2026 г.
+    </div>
+</div>
+
+<script>
+// ============================================
+// БАЗА ВОПРОСОВ (с поддержкой одиночного и множественного выбора)
+// ============================================
+var questionBank = [
+    // --- Вопросы с ОДНИМ правильным ответом (radio) ---
+    {
+        type: 'single',
+        question: "Для чего предназначаются ручные осколочные гранаты?",
+        options: [
+            "Для поражения осколками живой силы противника в ближнем бою",
+            "Для поражения бронированных целей и фортификационных сооружений",
+            "Для ведения снайперского огня на дальние дистанции",
+            "Для создания дымовых завес и сигнализации"
+        ],
+        correct: [0],
+        explanation: "Ручные осколочные гранаты предназначены для поражения осколками живой силы противника в ближнем бою (при атаке, в окопах, убежищах, населённых пунктах, в лесу, в горах и т.п.)."
+    },
+    {
+        type: 'single',
+        question: "На какие виды делятся гранаты в зависимости от дальности разлета осколков?",
+        options: [
+            "На наступательные и оборонительные",
+            "На лёгкие и тяжёлые",
+            "На дальнобойные и ближнего действия",
+            "На ручные и винтовочные"
+        ],
+        correct: [0],
+        explanation: "В зависимости от дальности разлёта осколков гранаты делятся на наступательные и оборонительные."
+    },
+    {
+        type: 'single',
+        question: "Какие гранаты относятся к наступательным?",
+        options: [
+            "РГД-5 и РГН",
+            "Ф-1 и РГО",
+            "РГД-5 и Ф-1",
+            "РГН и РГО"
+        ],
+        correct: [0],
+        explanation: "Ручные гранаты РГД-5 и РГН относятся к наступательным гранатам."
+    },
+    {
+        type: 'single',
+        question: "Какие гранаты относятся к оборонительным?",
+        options: [
+            "РГД-5 и РГН",
+            "Ф-1 и РГО",
+            "РГД-5 и Ф-1",
+            "РГН и РГО"
+        ],
+        correct: [1],
+        explanation: "Гранаты Ф-1 и РГО относятся к оборонительным гранатам."
+    },
+    {
+        type: 'single',
+        question: "Какой тип взрывателя у РГД-5 и Ф-1?",
+        options: [
+            "УЗРГМ дистанционный",
+            "УДЗ ударно-дистанционный",
+            "УЗРГМ ударного действия",
+            "Электрический дистанционный"
+        ],
+        correct: [0],
+        explanation: "У гранат РГД-5 и Ф-1 применяется взрыватель УЗРГМ (унифицированный запал ручной гранаты модернизированный) дистанционного действия."
+    },
+    {
+        type: 'single',
+        question: "Какой тип взрывателя у РГН и РГО?",
+        options: [
+            "УЗРГМ дистанционный",
+            "УДЗ ударно-дистанционный",
+            "УЗРГМ ударного действия",
+            "Электрический дистанционный"
+        ],
+        correct: [1],
+        explanation: "У гранат РГН и РГО применяется взрыватель УДЗ (ударно-дистанционный запад) ударно-дистанционного действия."
+    },
+    {
+        type: 'single',
+        question: "Какое время горения замедлителя у гранат РГД-5, Ф-1, РГН, РГО?",
+        options: [
+            "2,0–3,0 с",
+            "3,0–4,0 с",
+            "3,2–4,2 с",
+            "4,0–5,0 с"
+        ],
+        correct: [2],
+        explanation: "Время горения замедлителя у всех перечисленных гранат составляет 3,2–4,2 секунды."
+    },
+    {
+        type: 'single',
+        question: "Какое время дальнего взведения у РГН и РГО?",
+        options: [
+            "0,5–1,0 с",
+            "1,0–1,3 с",
+            "1,3–1,8 с",
+            "1,8–2,0 с"
+        ],
+        correct: [2],
+        explanation: "Время дальнего взведения у гранат РГН и РГО составляет 1,3–1,8 секунды."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус разлёта осколков у РГД-5?",
+        options: [
+            "до 15 м",
+            "до 20 м",
+            "до 25 м",
+            "до 30 м"
+        ],
+        correct: [2],
+        explanation: "Радиус разлёта осколков у РГД-5 составляет до 25 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус разлёта осколков у Ф-1?",
+        options: [
+            "до 100 м",
+            "до 150 м",
+            "до 200 м",
+            "до 250 м"
+        ],
+        correct: [2],
+        explanation: "Радиус разлёта осколков у Ф-1 составляет до 200 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус разлёта осколков у РГН?",
+        options: [
+            "до 15 м",
+            "до 20 м",
+            "до 24 м",
+            "до 30 м"
+        ],
+        correct: [2],
+        explanation: "Радиус разлёта осколков у РГН составляет до 24 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус разлёта осколков у РГО?",
+        options: [
+            "до 100 м",
+            "до 150 м",
+            "до 200 м",
+            "до 250 м"
+        ],
+        correct: [1],
+        explanation: "Радиус разлёта осколков у РГО составляет до 150 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус зоны эффективного поражения у РГД-5?",
+        options: ["3 м", "5 м", "7 м", "8 м"],
+        correct: [1],
+        explanation: "Радиус зоны эффективного поражения у РГД-5 составляет 5 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус зоны эффективного поражения у Ф-1?",
+        options: ["3 м", "5 м", "7 м", "8 м"],
+        correct: [2],
+        explanation: "Радиус зоны эффективного поражения у Ф-1 составляет 7 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус зоны эффективного поражения у РГН?",
+        options: ["5 м", "7 м", "8 м", "16 м"],
+        correct: [2],
+        explanation: "Радиус зоны эффективного поражения у РГН составляет 8 метров."
+    },
+    {
+        type: 'single',
+        question: "Какой радиус зоны эффективного поражения у РГО?",
+        options: ["5 м", "7 м", "8 м", "16 м"],
+        correct: [3],
+        explanation: "Радиус зоны эффективного поражения у РГО составляет 16 метров."
+    },
+    {
+        type: 'single',
+        question: "Какое взрывчатое вещество используется в РГД-5 и Ф-1?",
+        options: ["тротил", "гексоген", "пластит", "аммонал"],
+        correct: [0],
+        explanation: "В гранатах РГД-5 и Ф-1 используется тротил."
+    },
+    {
+        type: 'single',
+        question: "Какое взрывчатое вещество используется в РГН и РГО?",
+        options: ["тротил", "гексоген, пластит", "аммонал", "динамит"],
+        correct: [1],
+        explanation: "В гранатах РГН и РГО используется гексоген или пластит."
+    },
+    {
+        type: 'single',
+        question: "Какова масса заряженной гранаты РГД-5?",
+        options: ["260 г", "310 г", "350 г", "400 г"],
+        correct: [1],
+        explanation: "Масса заряженной гранаты РГД-5 составляет 310 г."
+    },
+    {
+        type: 'single',
+        question: "Какова масса заряженной гранаты Ф-1?",
+        options: ["500 г", "550 г", "600 г", "650 г"],
+        correct: [2],
+        explanation: "Масса заряженной гранаты Ф-1 составляет 600 г."
+    },
+    {
+        type: 'single',
+        question: "Какова масса заряженной гранаты РГН?",
+        options: ["260 г", "310 г", "350 г", "400 г"],
+        correct: [1],
+        explanation: "Масса заряженной гранаты РГН составляет 310 г."
+    },
+    {
+        type: 'single',
+        question: "Какова масса заряженной гранаты РГО?",
+        options: ["450 г", "500 г", "530 г", "580 г"],
+        correct: [2],
+        explanation: "Масса заряженной гранаты РГО составляет 530 г."
+    },
+    {
+        type: 'single',
+        question: "Какова средняя дальность броска РГД-5?",
+        options: ["30–40 м", "40–50 м", "50–60 м", "60–70 м"],
+        correct: [1],
+        explanation: "Средняя дальность броска РГД-5 составляет 40–50 метров."
+    },
+    {
+        type: 'single',
+        question: "Какова средняя дальность броска Ф-1?",
+        options: ["15–30 м", "20–40 м", "30–45 м", "40–50 м"],
+        correct: [1],
+        explanation: "Средняя дальность броска Ф-1 составляет 20–40 метров."
+    },
+    {
+        type: 'single',
+        question: "Какова средняя дальность броска РГН?",
+        options: ["20–35 м", "30–45 м", "40–50 м", "50–60 м"],
+        correct: [1],
+        explanation: "Средняя дальность броска РГН составляет 30–45 метров."
+    },
+    {
+        type: 'single',
+        question: "Какова средняя дальность броска РГО?",
+        options: ["15–30 м", "20–40 м", "30–45 м", "40–50 м"],
+        correct: [1],
+        explanation: "Средняя дальность броска РГО составляет 20–40 метров."
+    },
+    {
+        type: 'single',
+        question: "С какой скоростью горит порох в запальной трубке?",
+        options: [
+            "Примерно 0,5 см в секунду",
+            "Примерно 1 см в секунду",
+            "Примерно 2 см в секунду",
+            "Примерно 3 см в секунду"
+        ],
+        correct: [1],
+        explanation: "Порох в запальной трубке горит со скоростью примерно 1 см в секунду и не требует кислорода."
+    },
+    {
+        type: 'single',
+        question: "Как называется устройство, когда граната используется в качестве мины?",
+        options: [
+            "Растяжка",
+            "Ловушка",
+            "Западня",
+            "Сигнализатор"
+        ],
+        correct: [0],
+        explanation: "Подобное устройство называется «растяжка»."
+    },
+    {
+        type: 'single',
+        question: "Что происходит при динамической детонации гранаты?",
+        options: [
+            "Инерционный груз смещается и срабатывает детонатор",
+            "Срабатывает замедлитель",
+            "Воспламеняется порох",
+            "Срабатывает механический взрыватель"
+        ],
+        correct: [0],
+        explanation: "При динамической детонации при попадании гранаты в твёрдую цель инерционный груз смещается и срабатывает детонатор."
+    },
+    {
+        type: 'single',
+        question: "Сколько гранат и запалов в ящике?",
+        options: ["10", "15", "20", "25"],
+        correct: [2],
+        explanation: "В ящике находится 20 гранат и запалов."
+    },
+    {
+        type: 'single',
+        question: "Какова масса ящика с гранатами РГД-5?",
+        options: ["12 кг", "14 кг", "16 кг", "18 кг"],
+        correct: [1],
+        explanation: "Масса ящика с гранатами РГД-5 составляет 14 кг."
+    },
+
+    // --- Вопросы с НЕСКОЛЬКИМИ правильными ответами (checkbox) ---
+    {
+        type: 'multiple',
+        question: "Какие из перечисленных гранат относятся к наступательным? (выберите все правильные ответы)",
+        options: [
+            "РГД-5",
+            "Ф-1",
+            "РГН",
+            "РГО"
+        ],
+        correct: [0, 2],
+        explanation: "К наступательным гранатам относятся РГД-5 и РГН. Ф-1 и РГО — оборонительные."
+    },
+    {
+        type: 'multiple',
+        question: "Какие из перечисленных гранат относятся к оборонительным? (выберите все правильные ответы)",
+        options: [
+            "РГД-5",
+            "Ф-1",
+            "РГН",
+            "РГО"
+        ],
+        correct: [1, 3],
+        explanation: "К оборонительным гранатам относятся Ф-1 и РГО. РГД-5 и РГН — наступательные."
+    },
+    {
+        type: 'multiple',
+        question: "Какие характеристики соответствуют гранате РГД-5? (выберите все правильные ответы)",
+        options: [
+            "Тип гранаты: осколочная наступательная",
+            "Радиус разлёта осколков: до 25 м",
+            "Взрывчатое вещество: гексоген, пластит",
+            "Масса заряженной гранаты: 310 г"
+        ],
+        correct: [0, 1, 3],
+        explanation: "Для РГД-5: тип — осколочная наступательная, радиус разлёта — до 25 м, масса — 310 г. Взрывчатое вещество — тротил (вариант с гексогеном и пластитом относится к РГН и РГО)."
+    },
+    {
+        type: 'multiple',
+        question: "Какие характеристики соответствуют гранате Ф-1? (выберите все правильные ответы)",
+        options: [
+            "Тип гранаты: осколочная оборонительная",
+            "Радиус разлёта осколков: до 200 м",
+            "Взрывчатое вещество: тротил",
+            "Масса заряженной гранаты: 530 г"
+        ],
+        correct: [0, 1, 2],
+        explanation: "Для Ф-1: тип — осколочная оборонительная, радиус разлёта — до 200 м, взрывчатое вещество — тротил. Масса 530 г относится к РГО, а у Ф-1 — 600 г."
+    },
+    {
+        type: 'multiple',
+        question: "Какие утверждения о взрывателях гранат верны? (выберите все правильные ответы)",
+        options: [
+            "У РГД-5 и Ф-1 применяется взрыватель УЗРГМ дистанционного действия",
+            "У РГН и РГО применяется взрыватель УДЗ ударно-дистанционного действия",
+            "Время горения замедлителя у всех гранат составляет 3,2–4,2 с",
+            "Время дальнего взведения у РГД-5 и Ф-1 составляет 1,3–1,8 с"
+        ],
+        correct: [0, 1, 2],
+        explanation: "У РГД-5 и Ф-1 — УЗРГМ дистанционный, у РГН и РГО — УДЗ ударно-дистанционный, время горения замедлителя у всех — 3,2–4,2 с. Время дальнего взведения 1,3–1,8 с — только у РГН и РГО, у РГД-5 и Ф-1 его нет."
+    }
+];
+
+// ============================================
+// ЛОГИКА ТЕСТА
+// ============================================
+var questionsPerTest = 10;
+var usedQuestionIndices = [];   // пул использованных вопросов
+var currentQuestions = [];
+var selectedAnswers = {};       // { qIndex: [выбранные индексы] }
+
+function shuffleArray(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+    return a;
+}
+
+/**
+ * Выбирает вопросы из пула, исключая уже использованные.
+ * Если пул исчерпан — сбрасывает его.
+ */
+function getRandomQuestions() {
+    var availableIndices = [];
+    for (var i = 0; i < questionBank.length; i++) {
+        if (usedQuestionIndices.indexOf(i) === -1) {
+            availableIndices.push(i);
+        }
+    }
+    // Если оставшихся вопросов меньше, чем нужно — сбрасываем пул
+    if (availableIndices.length < questionsPerTest) {
+        usedQuestionIndices = [];
+        availableIndices = [];
+        for (var k = 0; k < questionBank.length; k++) {
+            availableIndices.push(k);
+        }
+    }
+    // Перемешиваем доступные индексы и берём нужное количество
+    var shuffled = shuffleArray(availableIndices);
+    var selected = shuffled.slice(0, questionsPerTest);
+    // Добавляем выбранные индексы в пул использованных
+    for (var m = 0; m < selected.length; m++) {
+        usedQuestionIndices.push(selected[m]);
+    }
+    // Возвращаем сами вопросы
+    var result = [];
+    for (var n = 0; n < selected.length; n++) {
+        result.push(questionBank[selected[n]]);
+    }
+    return result;
+}
+
+function renderTest() {
+    currentQuestions = getRandomQuestions();
+    selectedAnswers = {};
+    var container = document.getElementById('testContainer');
+    var html = '';
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        html += '<div class="question-block" id="q' + i + '">';
+        html += '<p>' + (i + 1) + '. ' + q.question + '</p>';
+        var inputType = (q.type === 'multiple') ? 'checkbox' : 'radio';
+        for (var j = 0; j < q.options.length; j++) {
+            html += '<label class="option-label" id="opt-' + i + '-' + j + '">';
+            html += '<input type="' + inputType + '" name="q' + i + '" value="' + j + '"> ';
+            html += q.options[j];
+            html += '</label>';
+        }
+        // Контейнер для пояснения (будет заполнен после проверки)
+        html += '<div class="explanation-box" id="expl-' + i + '" style="display:none;"></div>';
+        html += '</div>';
+    }
+    container.innerHTML = html;
+    document.getElementById('resultBox').style.display = 'none';
+}
+
+// ============================================
+// ДЕЛЕГИРОВАНИЕ СОБЫТИЙ (надёжно для radio и checkbox)
+// ============================================
+document.getElementById('testContainer').addEventListener('change', function(e) {
+    var target = e.target;
+    if (target.type !== 'radio' && target.type !== 'checkbox') return;
+    var name = target.name;             // "q0", "q1" и т.д.
+    var qIndex = parseInt(name.substring(1), 10);
+    var value = parseInt(target.value, 10);
+
+    if (target.type === 'radio') {
+        // Для radio: единственный выбранный ответ
+        selectedAnswers[name] = [value];
+    } else {
+        // Для checkbox: массив выбранных ответов
+        if (!selectedAnswers[name]) {
+            selectedAnswers[name] = [];
+        }
+        var arr = selectedAnswers[name];
+        var pos = arr.indexOf(value);
+        if (pos === -1) {
+            arr.push(value);
+        } else {
+            arr.splice(pos, 1);
+        }
+        // Сортируем для удобства сравнения
+        arr.sort(function(a, b) { return a - b; });
+    }
+});
+
+// ============================================
+// ПРОВЕРКА ТЕСТА
+// ============================================
+function checkTest() {
+    var correctCount = 0;
+
+    for (var i = 0; i < currentQuestions.length; i++) {
+        var q = currentQuestions[i];
+        var qBlock = document.getElementById('q' + i);
+        var selected = selectedAnswers['q' + i] || [];
+        var isCorrect = false;
+
+        // Сравнение наборов ответов
+        if (q.type === 'single') {
+            isCorrect = (selected.length === 1 && selected[0] === q.correct[0]);
+        } else {
+            // Множественный выбор: полное совпадение набора
+            if (selected.length === q.correct.length) {
+                var selSorted = selected.slice().sort(function(a,b){return a-b;});
+                var corSorted = q.correct.slice().sort(function(a,b){return a-b;});
+                isCorrect = true;
+                for (var k = 0; k < selSorted.length; k++) {
+                    if (selSorted[k] !== corSorted[k]) {
+                        isCorrect = false;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (isCorrect) {
+            correctCount++;
+            qBlock.classList.add('correct');
+            qBlock.classList.remove('incorrect');
+        } else {
+            qBlock.classList.add('incorrect');
+            qBlock.classList.remove('correct');
+        }
+
+        // Подсветка вариантов
+        for (var j = 0; j < q.options.length; j++) {
+            var optLabel = document.getElementById('opt-' + i + '-' + j);
+            optLabel.classList.remove('correct-answer', 'wrong-answer', 'missed-answer');
+            var isSelected = (selected.indexOf(j) !== -1);
+            var isRight = (q.correct.indexOf(j) !== -1);
+
+            if (isSelected && isRight) {
+                optLabel.classList.add('correct-answer');       // выбран и правильный
+            } else if (isSelected && !isRight) {
+                optLabel.classList.add('wrong-answer');         // выбран, но ошибочный
+            } else if (!isSelected && isRight) {
+                optLabel.classList.add('missed-answer');        // правильный, но не выбран
+            }
+        }
+
+        // Показ пояснения (всегда)
+        var explBox = document.getElementById('expl-' + i);
+        explBox.style.display = 'block';
+        var correctText = '';
+        if (q.type === 'single') {
+            correctText = q.options[q.correct[0]];
+        } else {
+            var parts = [];
+            for (var c = 0; c < q.correct.length; c++) {
+                parts.push(q.options[q.correct[c]]);
+            }
+            correctText = parts.join('; ');
+        }
+        explBox.innerHTML = '<strong>Пояснение:</strong> ' + q.explanation +
+                            '<br><strong>Правильный ответ:</strong> ' + correctText;
+    }
+
+    // Оценка
+    var grade, gradeText, gradeClass;
+    if (correctCount === 10) { grade = 5; gradeText = 'Отлично!'; gradeClass = 'grade-5'; }
+    else if (correctCount === 9) { grade = 4; gradeText = 'Хорошо!'; gradeClass = 'grade-4'; }
+    else if (correctCount === 8) { grade = 3; gradeText = 'Удовлетворительно'; gradeClass = 'grade-3'; }
+    else { grade = 2; gradeText = 'Неудовлетворительно. Требуется повторное изучение!'; gradeClass = 'grade-2'; }
+
+    var resultBox = document.getElementById('resultBox');
+    resultBox.style.display = 'block';
+    resultBox.className = 'result-box';
+    resultBox.innerHTML = '<div class="' + gradeClass + '">' +
+        '<p style="font-size: 28px;">Ваша оценка: ' + grade + '</p>' +
+        '<p style="font-size: 22px;">' + gradeText + '</p>' +
+        '<p style="font-size: 18px; margin-top: 10px;">Правильных ответов: ' + correctCount + ' из 10</p>' +
+        '</div>';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ============================================
+// СБРОС ТЕСТА
+// ============================================
+function resetTest() {
+    renderTest();
+    document.getElementById('resultBox').style.display = 'none';
+    var section = document.querySelector('.test-section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ============================================
+// ИНИЦИАЛИЗАЦИЯ
+// ============================================
+window.onload = function() {
+    renderTest();
+};
+</script>
+</body>
+</html>
